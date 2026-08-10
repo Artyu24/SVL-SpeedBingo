@@ -1,0 +1,1 @@
+$function sb:teleport/teleport_module {teamName:"Rat", gameTag:"$(gameTag)", gamePlayTag:"$(gamePlayTag)", x:"$(x)", y:"$(y)", z:"$(z)"}
