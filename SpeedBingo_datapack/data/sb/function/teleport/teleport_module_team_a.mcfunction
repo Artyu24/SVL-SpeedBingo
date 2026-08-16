@@ -1,1 +1,1 @@
-$function sb:teleport/teleport_module {teamName:"Rat", gameTag:"$(gameTag)", gamePlayTag:"$(gamePlayTag)", x:"$(x)", y:"$(y)", z:"$(z)"}
+$function sb:teleport/teleport_module {teamName:"Rat", newHeadTag:"SB_Head_New_TeamA", moveX:"-1", returnMoveX:"3", gameTag:"$(gameTag)", gamePlayTag:"$(gamePlayTag)", tpCoord:"$(tpCoord)"}

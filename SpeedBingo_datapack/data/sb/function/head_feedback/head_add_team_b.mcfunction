@@ -1,1 +1,0 @@
-function sb:head_feedback/head_add_team {teamTag:"SB_HeadPos_TeamB", newHeadTag:"SB_Head_New_TeamB", moveX:"1", returnMoveX:"-3"}

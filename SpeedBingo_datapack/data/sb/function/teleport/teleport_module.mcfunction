@@ -1,6 +1,9 @@
+# Si il n'y a aucun joueur de present
+execute positioned ~ ~1 ~ unless entity @a[gamemode=adventure,distance=..1] run return fail
+
 # Si le joueur n'est pas de la bonne equipe
-$execute positioned ~ ~1 ~ if entity @p[team=!$(teamName),distance=..1] run title @p[team=!$(teamName),distance=..2] actionbar {"text":"Tu n'est pas de la bonne équipe","color":"red"} 
-$execute positioned ~ ~1 ~ if entity @p[team=!$(teamName),distance=..1] run return fail
+$execute positioned ~ ~1 ~ if entity @p[gamemode=adventure,team=!$(teamName),distance=..1] run title @p[gamemode=adventure,team=!$(teamName),distance=..2] actionbar {"text":"Tu n'es pas de la bonne équipe","color":"red"} 
+$execute positioned ~ ~1 ~ if entity @p[gamemode=adventure,team=!$(teamName),distance=..1] run return fail
 
 # Si le joueur a deja jouer
 $execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=$(gameTag)] run title @p[distance=..2,tag=$(gameTag)] actionbar {"text":"Tu as déjà fait ce jeu !","color":"red"} 
@@ -28,7 +31,8 @@ $execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoT
 
 # Moment de la TP
 $execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoTPPad,scores={BingoTP=40..}] run tag @p[team=$(teamName),distance=..1,tag=BingoTPPad] add $(gamePlayTag)
+$function sb:head_feedback/head_add_team {teamTag:"$(teamName)", newHeadTag:"$(newHeadTag)", moveX:"$(moveX)", returnMoveX:"$(returnMoveX)"}
 $execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=$(gamePlayTag),tag=BingoTPPad] run scoreboard players reset @p[team=$(teamName),distance=..1,tag=$(gamePlayTag),tag=BingoTPPad] BingoTP
-$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=$(gamePlayTag),tag=BingoTPPad] run tp @p[team=$(teamName),distance=..1,tag=$(gamePlayTag),tag=BingoTPPad] ~$(x) ~$(y) ~$(z)
+$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=$(gamePlayTag),tag=BingoTPPad] run tp @p[team=$(teamName),distance=..1,tag=$(gamePlayTag),tag=BingoTPPad] $(tpCoord)
 $execute as @a[team=$(teamName),distance=5..100,tag=$(gamePlayTag),tag=BingoTPPad] run tag @s remove BingoTPPad
 return 1
