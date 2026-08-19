@@ -1,0 +1,1 @@
+$function sb:case/teleport/teleport_module_behaviour {teamName:"Rat", moveX:"-1", returnMoveX:"3", gameTag:"$(gameTag)", tpCoord:"$(tpCoord)"}

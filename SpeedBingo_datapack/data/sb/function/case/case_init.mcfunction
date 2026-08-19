@@ -1,0 +1,1 @@
+$function sb:case/case_init_behaviour {teamA:"Rat", teamB:"Stagiaire", caseName:"$(caseName)"}

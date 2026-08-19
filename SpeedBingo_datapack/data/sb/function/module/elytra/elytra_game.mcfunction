@@ -1,0 +1,2 @@
+function sb:module/elytra/elytra_behaviour {mainTeam:"Rat", colorTeam:"green", enemyTeam:"Stagiaire"}
+function sb:module/elytra/elytra_behaviour {mainTeam:"Stagiaire", colorTeam:"red", enemyTeam:"Rat"}

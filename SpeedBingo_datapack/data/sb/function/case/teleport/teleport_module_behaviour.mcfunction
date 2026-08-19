@@ -6,8 +6,8 @@ $execute positioned ~ ~1 ~ if entity @p[gamemode=adventure,team=!$(teamName),dis
 $execute positioned ~ ~1 ~ if entity @p[gamemode=adventure,team=!$(teamName),distance=..1] run return fail
 
 # Si le joueur a deja jouer
-$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=$(gameTag)] run title @p[distance=..2,tag=$(gameTag)] actionbar {"text":"Tu as déjà fait ce jeu !","color":"red"} 
-$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=$(gameTag)] run return fail
+$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoModule_$(gameTag)] run title @p[distance=..2,tag=BingoModule_$(gameTag)] actionbar {"text":"Tu as déjà fait ce jeu !","color":"red"} 
+$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoModule_$(gameTag)] run return fail
 
 # Si le joueur n'a pas jouer le jeu
 
@@ -30,9 +30,9 @@ $execute positioned ~ ~1 ~ run title @p[team=$(teamName),distance=..1,tag=BingoT
 $execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoTPPad,scores={BingoTP=..39}] run return fail
 
 # Moment de la TP
-$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoTPPad,scores={BingoTP=40..}] run tag @p[team=$(teamName),distance=..1,tag=BingoTPPad] add $(gamePlayTag)
-$function sb:head_feedback/head_add_team {teamTag:"$(teamName)", newHeadTag:"$(newHeadTag)", moveX:"$(moveX)", returnMoveX:"$(returnMoveX)"}
-$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=$(gamePlayTag),tag=BingoTPPad] run scoreboard players reset @p[team=$(teamName),distance=..1,tag=$(gamePlayTag),tag=BingoTPPad] BingoTP
-$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=$(gamePlayTag),tag=BingoTPPad] run tp @p[team=$(teamName),distance=..1,tag=$(gamePlayTag),tag=BingoTPPad] $(tpCoord)
-$execute as @a[team=$(teamName),distance=5..100,tag=$(gamePlayTag),tag=BingoTPPad] run tag @s remove BingoTPPad
+$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoTPPad,scores={BingoTP=40..}] run tag @p[team=$(teamName),distance=..1,tag=BingoTPPad] add BingoModule_$(gameTag)_Playing
+$function sb:case/head_add_team {teamTag:"$(teamName)", moveX:"$(moveX)", returnMoveX:"$(returnMoveX)"}
+$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoModule_$(gameTag)_Playing,tag=BingoTPPad] run scoreboard players reset @p[team=$(teamName),distance=..1,tag=BingoModule_$(gameTag)_Playing,tag=BingoTPPad] BingoTP
+$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoModule_$(gameTag)_Playing,tag=BingoTPPad] run tp @p[team=$(teamName),distance=..1,tag=BingoModule_$(gameTag)_Playing,tag=BingoTPPad] $(tpCoord)
+$execute as @a[team=$(teamName),distance=5..100,tag=BingoModule_$(gameTag)_Playing,tag=BingoTPPad] run tag @s remove BingoTPPad
 return 1

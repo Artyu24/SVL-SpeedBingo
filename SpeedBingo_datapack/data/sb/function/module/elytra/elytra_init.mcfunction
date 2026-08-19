@@ -1,0 +1,1 @@
+function sb:module/elytra/elytra_init_behaviour {teamA:"Rat", teamB:"Stagiaire"}

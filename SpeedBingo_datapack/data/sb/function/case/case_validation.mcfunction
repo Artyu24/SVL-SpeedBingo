@@ -1,0 +1,1 @@
+$execute as @e[distance=..100,type=minecraft:marker,tag=$(caseName),sort=nearest,limit=1] at @s run fill ~-4 ~ ~-4 ~4 ~ ~4 minecraft:$(color)_concrete replace #survisland:concretes
