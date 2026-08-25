@@ -1,0 +1,6 @@
+name: SpeedBingoMastermind
+version: '${version}'
+main: fr.tatamymy.mastermind.MastermindPlugin
+api-version: '1.21.11'
+author: Tata_mymy
+description: Mastermind physique integre au Speed Bingo.
