@@ -33,3 +33,17 @@ processResources {
 test {
     useJUnitPlatform()
 }
+
+tasks.register('mastermindJar', Jar) {
+    group = 'build'
+    description = 'Construit le plugin SpeedBingoMastermind.'
+    archiveBaseName = 'speed-bingo-mastermind'
+    from sourceSets.main.output
+    exclude 'plugin.yml'
+    from('src/mastermind/resources') {
+        include 'plugin.yml'
+        expand(version: project.version)
+    }
+}
+
+assemble.dependsOn tasks.named('mastermindJar')
