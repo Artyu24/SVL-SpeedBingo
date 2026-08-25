@@ -1,0 +1,15 @@
+name: SpeedBingoSimon
+version: '${version}'
+main: fr.tatamymy.simon.SimonPlugin
+api-version: '1.21.11'
+author: Tata_mymy
+description: Jeu de mémoire Simon à quatre couleurs.
+commands:
+  simon:
+    description: Configure et démarre le Simon.
+    usage: /simon <start|stop|bindbutton|bindlight>
+permissions:
+  simon.play:
+    default: true
+  simon.admin:
+    default: op
