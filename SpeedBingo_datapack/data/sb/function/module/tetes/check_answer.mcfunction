@@ -1,0 +1,3 @@
+# Une reponse correcte est un papier dont le nom personnalise correspond a answer.
+$execute at @e[type=minecraft:marker,tag=BingoTetes_$(instance)_Barrel,limit=1] if data block ~ ~ ~ Items[{id:"minecraft:paper",components:{"minecraft:custom_name":'{"text":"$(answer)"}'}}] run return run function sb:module/tetes/finish_correct {instance:"$(instance)",teamName:"$(teamName)",teamColor:"$(teamColor)",enemyTeam:"$(enemyTeam)",enemyColor:"$(enemyColor)",caseName:"$(caseName)"}
+$function sb:module/tetes/finish_wrong {instance:"$(instance)",teamName:"$(teamName)",teamColor:"$(teamColor)",enemyTeam:"$(enemyTeam)",enemyColor:"$(enemyColor)",caseName:"$(caseName)"}
