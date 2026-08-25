@@ -15,7 +15,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 import java.util.UUID;
 
 public final class MastermindPlugin extends JavaPlugin implements Listener {
@@ -100,35 +101,6 @@ public final class MastermindPlugin extends JavaPlugin implements Listener {
                 clearPlayArea(layout);
                 displaySolution(layout, solution);
                 player.sendMessage("§6[Mastermind] §aPartie lancee. Compose 5 propositions de 5 couleurs.");
-                return;
-            }
-        }
-    }
-
-    @EventHandler
-    public void onProposalClick(PlayerInteractEvent event) {
-        if (event.getHand() != EquipmentSlot.HAND
-                || event.getAction() != Action.RIGHT_CLICK_BLOCK
-                || event.getClickedBlock() == null) {
-            return;
-        }
-        Player player = event.getPlayer();
-        RoomSession room = sessions.get(player.getUniqueId());
-        if (room == null || room.complete()) {
-            return;
-        }
-        ItemStack held = player.getInventory().getItemInMainHand();
-        if (!COLOR_BY_WOOL.containsKey(held.getType())) {
-            return;
-        }
-        for (int index = 1; index <= CODE_LENGTH; index++) {
-            Block head = room.layout().named().get("proposal" + index);
-            Block target = proposalTarget(head);
-            Block support = target.getRelative(0, -1, 0);
-            if (event.getClickedBlock().equals(head) || event.getClickedBlock().equals(support)) {
-                event.setCancelled(true);
-                target.setType(held.getType(), false);
-                held.subtract(1);
                 return;
             }
         }
@@ -232,7 +204,11 @@ public final class MastermindPlugin extends JavaPlugin implements Listener {
         inventory.clear();
         int slot = 0;
         for (MastermindColor color : MastermindColor.values()) {
-            inventory.setItem(slot++, new ItemStack(WOOL_BY_COLOR.get(color), 64));
+            ItemStack stack = new ItemStack(WOOL_BY_COLOR.get(color), 64);
+            ItemMeta meta = stack.getItemMeta();
+            meta.setCanPlaceOn(Set.of(Material.YELLOW_CONCRETE));
+            stack.setItemMeta(meta);
+            inventory.setItem(slot++, stack);
         }
     }
 
