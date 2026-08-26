@@ -1,4 +1,5 @@
-$execute if entity @s[tag=BingoMastermind_Win] run scoreboard players operation #$(teamName) BingoTime_MM = @s BingoTime_MM
+function sb:timer/stop
+$execute if entity @s[tag=BingoMastermind_Win] run scoreboard players operation #Mastermind_$(teamName) BingoTime = @s BingoTime
 $execute if entity @s[tag=BingoMastermind_Win] run scoreboard players set #$(teamName) BingoValid_MM 1
 $execute unless entity @s[tag=BingoMastermind_Win] run scoreboard players set #$(teamName) BingoValid_MM 0
 $scoreboard players set #$(teamName) BingoDone_MM 1

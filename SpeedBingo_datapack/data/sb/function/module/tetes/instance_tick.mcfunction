@@ -1,9 +1,6 @@
 # Demarre le chrono lorsque le joueur teleporte arrive dans sa salle.
 $execute at @e[type=minecraft:marker,tag=BingoTetes_$(instance)_Start,limit=1] as @a[team=$(teamName),tag=BingoModule_Tetes_Playing,tag=!BingoTetes_Running,distance=..4] run function sb:module/tetes/player_start {teamName:"$(teamName)"}
 
-# Chronometre individuel en ticks.
-$scoreboard players add @a[team=$(teamName),tag=BingoModule_Tetes_Playing,tag=BingoTetes_Running] BingoTime_Tetes 1
-
 # Un bouton alimente ouvre le mur de cette instance.
 $execute at @e[type=minecraft:marker,tag=BingoTetes_$(instance)_Button,limit=1] if block ~ ~ ~ minecraft:stone_button[powered=true] run function sb:module/tetes/wall_capture {instance:"$(instance)",block:"minecraft:air"}
 

@@ -1,3 +1,4 @@
+function sb:timer/stop
 $scoreboard players set #$(teamName) BingoDone_Tetes 1
 tag @s remove BingoTetes_Running
 tag @s remove BingoModule_Tetes_Playing
