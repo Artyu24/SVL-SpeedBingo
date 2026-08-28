@@ -1,4 +1,2 @@
-# Rempli automatiquement avec les commandes /simon bind...
-buttons: {}
-effects: {}
-lights: {}
+# La salle Simon est détectée automatiquement grâce aux têtes t1 à t4
+# aux boutons placés sur les quatre bétons colorés et aux bulbs derrière les têtes.

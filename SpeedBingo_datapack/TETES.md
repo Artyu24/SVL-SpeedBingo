@@ -3,6 +3,10 @@
 Le module utilise deux salles independantes, A et B. Les noms des equipes sont
 fournis aux fonctions et ne sont pas encodes dans les marqueurs.
 
+La teleportation selectionne un seul joueur par equipe avec le tag
+`BingoModule_Tetes_Playing`. Tant que ce tag est present sur un membre de
+l'equipe, aucun autre membre ne peut entrer dans le module Tetes.
+
 Marqueurs requis par instance :
 
 - `BingoTetes_<instance>_Start`

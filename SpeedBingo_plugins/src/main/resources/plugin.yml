@@ -6,8 +6,8 @@ author: Tata_mymy
 description: Jeu de mémoire Simon à quatre couleurs.
 commands:
   simon:
-    description: Configure et démarre le Simon.
-    usage: /simon <start|stop|bindbutton|bindlight>
+    description: Démarre ou arrête le Simon.
+    usage: /simon <start|stop> [joueur]
 permissions:
   simon.play:
     default: true
