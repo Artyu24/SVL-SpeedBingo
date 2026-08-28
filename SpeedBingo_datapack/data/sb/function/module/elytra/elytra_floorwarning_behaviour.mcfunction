@@ -1,0 +1,20 @@
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-1 ~ minecraft:barrier run title @s actionbar {"text":"Tu vas t'écraser !","color":"red"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-2 ~ minecraft:barrier run title @s actionbar {"text":"Tu vas t'écraser !","color":"red"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-3 ~ minecraft:barrier run title @s actionbar {"text":"Tu vas t'écraser !","color":"red"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-4 ~ minecraft:barrier run title @s actionbar {"text":"Tu vas t'écraser !","color":"red"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-5 ~ minecraft:barrier run title @s actionbar {"text":"Tu vas t'écraser !","color":"red"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-6 ~ minecraft:barrier run title @s actionbar {"text":"Tu vas t'écraser !","color":"red"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-7 ~ minecraft:barrier run title @s actionbar {"text":"Tu es proche du sol !","color":"gold"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-8 ~ minecraft:barrier run title @s actionbar {"text":"Tu es proche du sol !","color":"gold"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-9 ~ minecraft:barrier run title @s actionbar {"text":"Tu es proche du sol !","color":"gold"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-10 ~ minecraft:barrier run title @s actionbar {"text":"Tu es proche du sol !","color":"gold"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-11 ~ minecraft:barrier run title @s actionbar {"text":"Tu es proche du sol !","color":"gold"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-12 ~ minecraft:barrier run title @s actionbar {"text":"Tu es proche du sol !","color":"gold"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-13 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-14 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-15 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-16 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-17 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-18 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-19 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-20 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}

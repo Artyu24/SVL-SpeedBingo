@@ -1,2 +1,2 @@
-$execute if score #$(teamA)Score BingoScore_Elytra > #$(teamB)Score BingoScore_Elytra run function sb:case/case_validation {teamWin:"$(teamA)", teamLose:"$(teamB)", caseName:"$(caseName)", color:"$(colorTeamA)"}
-$execute if score #$(teamA)Score BingoScore_Elytra < #$(teamB)Score BingoScore_Elytra run function sb:case/case_validation {teamWin:"$(teamB)", teamLose:"$(teamA)", caseName:"$(caseName)", color:"$(colorTeamB)"}
+$execute if score #$(teamA)Score BingoScore_Elytra > #$(teamB)Score BingoScore_Elytra run function sb:case/case_validation {teamWin:"$(teamA)", teamLose:"$(teamB)", caseName:"$(caseName)", colorBlock:"$(colorTeamBlockA)", colorText:"$(colorTeamTextA)"}
+$execute if score #$(teamA)Score BingoScore_Elytra < #$(teamB)Score BingoScore_Elytra run function sb:case/case_validation {teamWin:"$(teamB)", teamLose:"$(teamA)", caseName:"$(caseName)", colorBlock:"$(colorTeamBlockB)", colorText:"$(colorTeamTextB)"}

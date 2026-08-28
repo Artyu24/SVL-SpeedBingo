@@ -1,1 +1,1 @@
-function sb:module/elytra/elytra_init_behaviour {teamA:"Rat", teamB:"Stagiaire"}
+function sb:module/elytra/elytra_init_behaviour {teamA:"Albertos", teamB:"RTT"}
