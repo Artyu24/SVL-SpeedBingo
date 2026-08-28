@@ -9,3 +9,4 @@ scoreboard objectives add BingoValid_Tetes dummy
 scoreboard objectives add BingoDone_Tetes dummy
 scoreboard objectives add BingoValid_MM dummy
 scoreboard objectives add BingoDone_MM dummy
+scoreboard objectives add BingoSimonScore dummy

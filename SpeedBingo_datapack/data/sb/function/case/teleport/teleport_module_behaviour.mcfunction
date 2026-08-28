@@ -9,6 +9,10 @@ $execute positioned ~ ~1 ~ if entity @p[gamemode=adventure,team=!$(teamName),dis
 $execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoModule_$(gameTag)] run title @p[distance=..2,tag=BingoModule_$(gameTag)] actionbar {"text":"Tu as déjà fait ce jeu !","color":"red"} 
 $execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..1,tag=BingoModule_$(gameTag)] run return fail
 
+# Si un membre de l'equipe joue deja dans ce module
+$execute positioned ~ ~1 ~ if entity @a[team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run title @p[team=$(teamName),distance=..2] actionbar {"text":"Un joueur de ton équipe est déjà dans ce module !","color":"red"}
+$execute positioned ~ ~1 ~ if entity @a[team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run return fail
+
 # Si le joueur n'a pas jouer le jeu
 
 # Preparation a la tp
