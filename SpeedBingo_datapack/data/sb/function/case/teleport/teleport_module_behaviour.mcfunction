@@ -15,6 +15,10 @@ $execute positioned ~ ~1 ~ if entity @a[team=$(teamName),tag=BingoModule_$(gameT
 
 # Si le joueur n'a pas jouer le jeu
 
+# Si ya déjà un joueur qui joue au module
+$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..100,tag=BingoModule_$(gameTag)_Playing] run title @p[gamemode=adventure,team=!$(teamName),distance=..2] actionbar {"text":"Quelqu'un est déjà en train de jouer à ce module !","color":"red"} 
+$execute positioned ~ ~1 ~ if entity @p[team=$(teamName),distance=..100,tag=BingoModule_$(gameTag)_Playing] run return fail
+
 # Preparation a la tp
 $execute positioned ~ ~1 ~ run tag @a[team=$(teamName),distance=..2] remove BingoTPPad
 $execute positioned ~ ~1 ~ run tag @p[team=$(teamName),distance=..1] add BingoTPPad
