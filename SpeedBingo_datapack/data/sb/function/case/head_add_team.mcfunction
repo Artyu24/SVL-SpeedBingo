@@ -3,5 +3,5 @@ $data modify entity @e[distance=..8,type=minecraft:item_display,tag=$(teamTag)_N
 $tag @e[distance=..8,type=minecraft:item_display,tag=$(teamTag)_New,limit=1] remove $(teamTag)_New
 $execute as @e[distance=..8,type=minecraft:marker,tag=$(teamTag),limit=1] at @s run tp @s ~$(moveX) ~ ~
 $scoreboard players add @e[distance=..8,type=minecraft:marker,tag=$(teamTag),limit=1] BingoHead 1
-$execute as @e[type=minecraft:marker,tag=$(teamTag),limit=1,scores={BingoHead=3}] at @s run tp @s ~$(returnMoveX) ~1 ~
-$execute as @e[type=minecraft:marker,tag=$(teamTag),limit=1,scores={BingoHead=6}] at @s run tp @s ~$(returnMoveX) ~1 ~
+$execute as @e[distance=..8,type=minecraft:marker,tag=$(teamTag),limit=1,scores={BingoHead=3}] at @s run tp @s ~$(returnMoveX) ~1 ~
+$execute as @e[distance=..8,type=minecraft:marker,tag=$(teamTag),limit=1,scores={BingoHead=6}] at @s run tp @s ~$(returnMoveX) ~1 ~
