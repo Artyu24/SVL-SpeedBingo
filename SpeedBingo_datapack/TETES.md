@@ -5,8 +5,8 @@ fournis aux fonctions et ne sont pas encodes dans les marqueurs.
 
 Schematics prêtes à coller avec les entités (`//paste -e`) :
 
-- `SpeedBingo_schematics/tetes/schem_salle_tetes_A_marqueurs.schem` pour Albertos ;
-- `SpeedBingo_schematics/tetes/schem_salle_tetes_B_marqueurs.schem` pour RTT.
+- `SpeedBingo_schematics/tetes/schem_salle_tetes_Albertos_marqueurs.schem` pour Albertos ;
+- `SpeedBingo_schematics/tetes/schem_salle_tetes_RTT_marqueurs.schem` pour RTT.
 
 La teleportation selectionne un seul joueur par equipe avec le tag
 `BingoModule_Tetes_Playing`. Tant que ce tag est present sur un membre de

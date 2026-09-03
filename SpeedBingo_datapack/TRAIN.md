@@ -11,8 +11,8 @@ le dernier membre en sort.
 
 Schematics à coller avec les entités (`//paste -e`) :
 
-- `SpeedBingo_schematics/train/salle_enfant_equipe_A_datapack.schem` ;
-- `SpeedBingo_schematics/train/salle_enfant_equipe_B_datapack.schem`.
+- `SpeedBingo_schematics/train/salle_enfant_equipe_Albertos_datapack.schem` ;
+- `SpeedBingo_schematics/train/salle_enfant_equipe_RTT_datapack.schem`.
 
 Les schematics ne contiennent plus de command blocks. Les marqueurs du circuit
 et de la salle sont enregistrés automatiquement par le datapack.

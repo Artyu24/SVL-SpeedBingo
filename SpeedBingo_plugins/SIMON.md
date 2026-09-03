@@ -5,11 +5,12 @@ pierre noire polie. Chaque joueur et chaque salle ont une session independante.
 
 Les deux schematics de salle disponibles sont :
 
-- `SpeedBingo_schematics/simon/salle_specimen.schem` ;
-- `SpeedBingo_schematics/simon/salle_specimen2.schem`.
+- `SpeedBingo_schematics/simon/salle_simon_Albertos.schem` pour Albertos ;
+- `SpeedBingo_schematics/simon/salle_simon_RTT.schem` pour RTT.
 
-Le plugin détectant chaque salle par sa position, aucun nom d'équipe n'est
-encodé directement dans ces deux fichiers.
+Le plugin detecte chaque salle par sa position. Les noms d'equipe dans les noms
+de fichiers servent a identifier clairement quelle copie doit etre collee pour
+Albertos et laquelle doit etre collee pour RTT.
 
 ## Correspondance des couleurs
 

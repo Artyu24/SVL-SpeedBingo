@@ -13,8 +13,8 @@ est teleporte au marqueur de sortie situe hors de la piece.
 Deux versions pretes a coller se trouvent dans
 `SpeedBingo_schematics/airship` :
 
-- `salle_airship_A_marqueurs.schem`
-- `salle_airship_B_marqueurs.schem`
+- `salle_airship_Albertos_marqueurs.schem`
+- `salle_airship_RTT_marqueurs.schem`
 
 Les entites doivent etre collees avec la structure (`//paste -e` avec
 WorldEdit). Les marqueurs permettent au datapack de retrouver les leviers,

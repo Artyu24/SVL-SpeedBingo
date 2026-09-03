@@ -15,8 +15,8 @@ grille finale.
 
 Les versions redécorées prêtes à coller avec les entités (`//paste -e`) sont :
 
-- `SpeedBingo_schematics/mastermind/mastermind_redecore_A_marqueurs.schem` pour Albertos ;
-- `SpeedBingo_schematics/mastermind/mastermind_redecore_B_marqueurs.schem` pour RTT.
+- `SpeedBingo_schematics/mastermind/mastermind_redecore_Albertos_marqueurs.schem` pour Albertos ;
+- `SpeedBingo_schematics/mastermind/mastermind_redecore_RTT_marqueurs.schem` pour RTT.
 
 Initialisation :
 
