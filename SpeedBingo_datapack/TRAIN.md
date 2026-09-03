@@ -2,8 +2,8 @@
 
 Le train fonctionne automatiquement dans deux salles indépendantes :
 
-- instance A : équipe `Albertos` ;
-- instance B : équipe `RTT`.
+- instance `Albertos` ;
+- instance `RTT`.
 
 Le train apparaît lorsqu'au moins un membre de l'équipe associée se trouve dans
 sa salle. Il tourne en boucle tant que la salle est occupée, puis disparaît quand

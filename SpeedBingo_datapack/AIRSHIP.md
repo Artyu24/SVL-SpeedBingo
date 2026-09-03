@@ -19,7 +19,7 @@ Deux versions pretes a coller se trouvent dans
 Les entites doivent etre collees avec la structure (`//paste -e` avec
 WorldEdit). Les marqueurs permettent au datapack de retrouver les leviers,
 l'echelle et la sortie meme si la salle est deplacee, tournee ou mise en
-miroir. Eloigner les centres des copies A et B d'au moins 80 blocs.
+miroir. Eloigner les centres des copies Albertos et RTT d'au moins 80 blocs.
 
 ## Mise en route
 
@@ -29,8 +29,8 @@ Apres `/reload`, executer :
 
 Pour tester sans la grille, executer en tant que joueur :
 
-- instance A : `/function sb:module/airship/enter_a`
-- instance B : `/function sb:module/airship/enter_b`
+- Albertos : `/function sb:module/airship/enter_albertos`
+- RTT : `/function sb:module/airship/enter_rtt`
 
 Avec le teleporteur de la grille, utiliser le tag de jeu `Airship`. Quand le
 joueur portant `BingoModule_Airship_Playing` arrive a proximite de sa salle,

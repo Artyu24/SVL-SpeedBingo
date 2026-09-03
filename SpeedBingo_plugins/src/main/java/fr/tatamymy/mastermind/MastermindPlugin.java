@@ -84,7 +84,7 @@ public final class MastermindPlugin extends JavaPlugin implements Listener {
     }
 
     private void startIfInsideRoom(Player player) {
-        for (String instance : List.of("A", "B")) {
+        for (String instance : List.of("Albertos", "RTT")) {
             Marker start = marker(player.getWorld(), "BingoMastermind_" + instance + "_Start");
             if (start != null && start.getLocation().distanceSquared(player.getLocation()) <= 16.0) {
                 RoomLayout layout = discoverLayout(start.getLocation(), instance);
