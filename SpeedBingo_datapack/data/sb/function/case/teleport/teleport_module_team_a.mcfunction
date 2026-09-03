@@ -1,1 +1,0 @@
-$function sb:case/teleport/teleport_module_behaviour {teamName:"Albertos", moveX:"-1", returnMoveX:"3", gameTag:"$(gameTag)", tpCoord:"$(tpCoord)"}
