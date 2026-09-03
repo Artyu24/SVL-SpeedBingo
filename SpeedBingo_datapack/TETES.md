@@ -19,7 +19,7 @@ Marqueurs requis par instance :
 
 Initialisation :
 
-`function sb:module/tetes/tetes_init {teamA:"Rat",teamB:"Stagiaire"}`
+`function sb:module/tetes/tetes_init {teamA:"Albertos",teamB:"RTT"}`
 
 La ligne d'appel dans `sb:tick` centralise les noms d'equipe, le nom de la case
 et la reponse attendue. La reponse est le nom personnalise d'un papier depose

@@ -1,0 +1,13 @@
+# Preserve l'orientation du levier, y compris apres rotation ou miroir du schematic.
+execute if block ~ ~ ~ minecraft:lever[face=wall,facing=north,powered=true] run setblock ~ ~ ~ minecraft:lever[face=wall,facing=north,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=wall,facing=south,powered=true] run setblock ~ ~ ~ minecraft:lever[face=wall,facing=south,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=wall,facing=east,powered=true] run setblock ~ ~ ~ minecraft:lever[face=wall,facing=east,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=wall,facing=west,powered=true] run setblock ~ ~ ~ minecraft:lever[face=wall,facing=west,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=floor,facing=north,powered=true] run setblock ~ ~ ~ minecraft:lever[face=floor,facing=north,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=floor,facing=south,powered=true] run setblock ~ ~ ~ minecraft:lever[face=floor,facing=south,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=floor,facing=east,powered=true] run setblock ~ ~ ~ minecraft:lever[face=floor,facing=east,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=floor,facing=west,powered=true] run setblock ~ ~ ~ minecraft:lever[face=floor,facing=west,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=ceiling,facing=north,powered=true] run setblock ~ ~ ~ minecraft:lever[face=ceiling,facing=north,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=ceiling,facing=south,powered=true] run setblock ~ ~ ~ minecraft:lever[face=ceiling,facing=south,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=ceiling,facing=east,powered=true] run setblock ~ ~ ~ minecraft:lever[face=ceiling,facing=east,powered=false]
+execute if block ~ ~ ~ minecraft:lever[face=ceiling,facing=west,powered=true] run setblock ~ ~ ~ minecraft:lever[face=ceiling,facing=west,powered=false]

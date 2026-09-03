@@ -15,4 +15,4 @@ grille finale.
 
 Initialisation :
 
-`function sb:module/mastermind/mastermind_init {teamA:"Rat",teamB:"Stagiaire"}`
+`function sb:module/mastermind/mastermind_init {teamA:"Albertos",teamB:"RTT"}`
