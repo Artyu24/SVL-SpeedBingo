@@ -10,5 +10,5 @@ tag @a remove BingoCraft_Running
 tag @a remove BingoModule_Craft
 tag @a remove BingoModule_Craft_Playing
 
-function sb:module/craft/refill_instance {instance:"A"}
-function sb:module/craft/refill_instance {instance:"B"}
+function sb:module/craft/refill_instance {instance:"Albertos"}
+function sb:module/craft/refill_instance {instance:"RTT"}

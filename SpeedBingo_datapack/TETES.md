@@ -1,26 +1,26 @@
 # Module Tetes
 
-Le module utilise deux salles independantes, A et B. Les noms des equipes sont
-fournis aux fonctions et ne sont pas encodes dans les marqueurs.
+Le module utilise deux salles independantes nommees Albertos et RTT. Les noms
+des equipes sont encodes directement dans les marqueurs.
 
 Schematics prêtes à coller avec les entités (`//paste -e`) :
 
-- `SpeedBingo_schematics/tetes/schem_salle_tetes_A_marqueurs.schem` pour Albertos ;
-- `SpeedBingo_schematics/tetes/schem_salle_tetes_B_marqueurs.schem` pour RTT.
+- `SpeedBingo_schematics/tetes/schem_salle_tetes_Albertos_marqueurs.schem` pour Albertos ;
+- `SpeedBingo_schematics/tetes/schem_salle_tetes_RTT_marqueurs.schem` pour RTT.
 
 La teleportation selectionne un seul joueur par equipe avec le tag
 `BingoModule_Tetes_Playing`. Tant que ce tag est present sur un membre de
 l'equipe, aucun autre membre ne peut entrer dans le module Tetes.
 
-Marqueurs requis par instance :
+Marqueurs requis pour `<equipe>` egal a `Albertos` ou `RTT` :
 
-- `BingoTetes_<instance>_Start`
-- `BingoTetes_<instance>_Button`
-- `BingoTetes_<instance>_WallA`
-- `BingoTetes_<instance>_WallB`
-- `BingoTetes_<instance>_Barrel`
-- `BingoTetes_<instance>_Finish`
-- `BingoTetes_<instance>_Return` (a placer sur la grille finale)
+- `BingoTetes_<equipe>_Start`
+- `BingoTetes_<equipe>_Button`
+- `BingoTetes_<equipe>_Wall1`
+- `BingoTetes_<equipe>_Wall2`
+- `BingoTetes_<equipe>_Barrel`
+- `BingoTetes_<equipe>_Finish`
+- `BingoTetes_<equipe>_Return` (a placer sur la grille finale)
 
 Initialisation :
 

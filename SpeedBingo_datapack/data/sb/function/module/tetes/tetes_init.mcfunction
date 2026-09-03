@@ -11,5 +11,5 @@ tag @a remove BingoTetes_Running
 tag @a remove BingoModule_Tetes
 tag @a remove BingoModule_Tetes_Playing
 
-function sb:module/tetes/instance_reset {instance:"A"}
-function sb:module/tetes/instance_reset {instance:"B"}
+function sb:module/tetes/instance_reset {instance:"Albertos"}
+function sb:module/tetes/instance_reset {instance:"RTT"}
