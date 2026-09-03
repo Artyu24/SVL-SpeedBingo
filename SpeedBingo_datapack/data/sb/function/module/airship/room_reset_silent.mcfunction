@@ -1,0 +1,9 @@
+scoreboard players set @s BingoAirStep 0
+scoreboard players set @s BingoAirState 0
+$execute at @e[type=minecraft:marker,tag=BingoAirship_$(instance)_Lever1,limit=1] run function sb:module/airship/lower_lever
+$execute at @e[type=minecraft:marker,tag=BingoAirship_$(instance)_Lever2,limit=1] run function sb:module/airship/lower_lever
+$execute at @e[type=minecraft:marker,tag=BingoAirship_$(instance)_Lever3,limit=1] run function sb:module/airship/lower_lever
+$execute at @e[type=minecraft:marker,tag=BingoAirship_$(instance)_Lever4,limit=1] run function sb:module/airship/lower_lever
+$execute at @e[type=minecraft:marker,tag=BingoAirship_$(instance)_Lever5,limit=1] run function sb:module/airship/lower_lever
+$execute at @e[type=minecraft:marker,tag=BingoAirship_$(instance)_Lever6,limit=1] run function sb:module/airship/lower_lever
+$execute at @e[type=minecraft:marker,tag=BingoAirship_$(instance)_Lever7,limit=1] run function sb:module/airship/lower_lever

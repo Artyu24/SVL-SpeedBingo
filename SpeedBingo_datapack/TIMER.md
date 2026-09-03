@@ -13,4 +13,4 @@ A la fin ou lors d'une reinitialisation, l'executer de la meme facon :
 
 Le score du joueur reste disponible dans `BingoTime` apres l'arret. Lorsqu'un
 module conserve un resultat d'equipe, son faux joueur doit inclure le nom du
-module (par exemple `#Tetes_Rat`) afin que deux modules ne s'ecrasent pas.
+module (par exemple `#Tetes_RTT`) afin que deux modules ne s'ecrasent pas.

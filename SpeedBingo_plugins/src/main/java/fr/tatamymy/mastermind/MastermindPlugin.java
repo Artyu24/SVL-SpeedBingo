@@ -142,7 +142,8 @@ public final class MastermindPlugin extends JavaPlugin implements Listener {
         } else {
             player.sendMessage("§6[Mastermind] §eEssai " + attempt + "/5 : §a"
                     + result.correctPositions() + " bien placees §7- §e"
-                    + result.misplacedColors() + " mal placees");
+                    + result.misplacedColors() + " mal placees §7- §c"
+                    + result.incorrectColors(CODE_LENGTH) + " incorrectes");
         }
 
         if (attempt >= MAX_ATTEMPTS) {
@@ -235,11 +236,11 @@ public final class MastermindPlugin extends JavaPlugin implements Listener {
         Block anchor = layout.named().get("test" + attempt);
         for (int index = 0; index < CODE_LENGTH; index++) {
             testTarget(anchor, index).setType(WOOL_BY_COLOR.get(guess.get(index)), false);
-            Material hint = index < result.misplacedColors()
-                    ? Material.YELLOW_WOOL
-                    : index < result.misplacedColors() + result.correctPositions()
-                    ? Material.LIME_WOOL
-                    : Material.AIR;
+            Material hint = index < result.correctPositions()
+                    ? Material.GREEN_CONCRETE
+                    : index < result.correctPositions() + result.misplacedColors()
+                    ? Material.YELLOW_CONCRETE
+                    : Material.RED_CONCRETE;
             hintTarget(anchor, index).setType(hint, false);
         }
     }

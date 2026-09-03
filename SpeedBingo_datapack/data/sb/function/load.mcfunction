@@ -9,4 +9,9 @@ scoreboard objectives add BingoValid_Tetes dummy
 scoreboard objectives add BingoDone_Tetes dummy
 scoreboard objectives add BingoValid_MM dummy
 scoreboard objectives add BingoDone_MM dummy
+scoreboard objectives add BingoValid_Craft dummy
+scoreboard objectives add BingoDone_Craft dummy
 scoreboard objectives add BingoSimonScore dummy
+scoreboard objectives add BingoAirStep dummy
+scoreboard objectives add BingoAirState dummy
+function train_mymy:load

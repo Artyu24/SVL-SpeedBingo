@@ -3,6 +3,14 @@
 Le plugin detecte automatiquement la salle autour du bouton de depart en
 pierre noire polie. Chaque joueur et chaque salle ont une session independante.
 
+Les deux schematics de salle disponibles sont :
+
+- `SpeedBingo_schematics/simon/salle_specimen.schem` ;
+- `SpeedBingo_schematics/simon/salle_specimen2.schem`.
+
+Le plugin détectant chaque salle par sa position, aucun nom d'équipe n'est
+encodé directement dans ces deux fichiers.
+
 ## Correspondance des couleurs
 
 - `t1` : vert

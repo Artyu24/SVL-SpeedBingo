@@ -4,4 +4,8 @@ public record GuessResult(int correctPositions, int misplacedColors) {
     public boolean won(int codeLength) {
         return correctPositions == codeLength;
     }
+
+    public int incorrectColors(int codeLength) {
+        return codeLength - correctPositions - misplacedColors;
+    }
 }
