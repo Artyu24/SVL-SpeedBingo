@@ -13,6 +13,11 @@ Marqueurs requis par instance : `Start`, `ValidationButton`, `Barrel`, `Finish`,
 Tous sont inclus dans les schematics sauf `Return`, qui doit etre place sur la
 grille finale.
 
+Les versions redécorées prêtes à coller avec les entités (`//paste -e`) sont :
+
+- `SpeedBingo_schematics/mastermind/mastermind_redecore_A_marqueurs.schem` pour Albertos ;
+- `SpeedBingo_schematics/mastermind/mastermind_redecore_B_marqueurs.schem` pour RTT.
+
 Initialisation :
 
 `function sb:module/mastermind/mastermind_init {teamA:"Albertos",teamB:"RTT"}`
