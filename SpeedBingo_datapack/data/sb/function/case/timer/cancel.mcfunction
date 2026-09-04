@@ -1,0 +1,1 @@
+tag @p[distance=..5, gamemode=adventure] remove BingoTimerTick
