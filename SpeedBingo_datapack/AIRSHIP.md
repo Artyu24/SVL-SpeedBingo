@@ -32,6 +32,6 @@ Pour tester sans la grille, executer en tant que joueur :
 - Albertos : `/function sb:module/airship/enter_albertos`
 - RTT : `/function sb:module/airship/enter_rtt`
 
-Avec le teleporteur de la grille, utiliser le tag de jeu `Airship`. Quand le
-joueur portant `BingoModule_Airship_Playing` arrive a proximite de sa salle,
+Avec le teleporteur de la grille, utiliser le tag de jeu `A3`. Quand le
+joueur portant `BingoModule_A3_Playing` arrive a proximite de sa salle,
 le datapack le place automatiquement sur l'echelle et lance la partie.

@@ -1,3 +1,3 @@
 # Une instance porte directement le nom de son equipe.
-$function sb:module/tetes/instance_tick {instance:"Albertos",teamName:"$(teamA)",teamColor:"red",enemyTeam:"$(teamB)",enemyColor:"green",caseName:"$(caseName)",answer:"$(answer)"}
-$function sb:module/tetes/instance_tick {instance:"RTT",teamName:"$(teamB)",teamColor:"green",enemyTeam:"$(teamA)",enemyColor:"red",caseName:"$(caseName)",answer:"$(answer)"}
+$function sb:module/tetes/instance_tick {instance:"Albertos",teamName:"$(teamA)",teamColorBlock:"light_blue",teamColorText:"aqua",enemyTeam:"$(teamB)",enemyColorBlock:"lime",enemyColorText:"green",caseName:"$(caseName)",answer:"$(answer)"}
+$function sb:module/tetes/instance_tick {instance:"RTT",teamName:"$(teamB)",teamColorBlock:"lime",teamColorText:"green",enemyTeam:"$(teamA)",enemyColorBlock:"light_blue",enemyColorText:"aqua",caseName:"$(caseName)",answer:"$(answer)"}

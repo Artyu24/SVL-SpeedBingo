@@ -1,7 +1,8 @@
 # Nettoie les joueurs et remet toutes les instances presentes a zero.
+execute as @a[tag=BingoAirship_Running] at @s run function sb:case/timer/cancel
 tag @a remove BingoAirship_Running
-tag @a remove BingoModule_Airship_Playing
-tag @a remove BingoModule_Airship
+tag @a remove BingoModule_A3_Playing
+tag @a remove BingoModule_A3
 tag @a remove BingoAirship_Albertos_Success
 tag @a remove BingoAirship_RTT_Success
 

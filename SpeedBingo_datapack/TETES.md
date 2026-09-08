@@ -9,8 +9,9 @@ Schematics prêtes à coller avec les entités (`//paste -e`) :
 - `SpeedBingo_schematics/tetes/schem_salle_tetes_RTT_marqueurs.schem` pour RTT.
 
 La teleportation selectionne un seul joueur par equipe avec le tag
-`BingoModule_Tetes_Playing`. Tant que ce tag est present sur un membre de
+`BingoModule_C2_Playing`. Tant que ce tag est present sur un membre de
 l'equipe, aucun autre membre ne peut entrer dans le module Tetes.
+La case de teleportation doit donc utiliser le `gameTag` `C2`.
 
 Marqueurs requis pour `<equipe>` egal a `Albertos` ou `RTT` :
 
@@ -26,6 +27,6 @@ Initialisation :
 
 `function sb:module/tetes/tetes_init {teamA:"Albertos",teamB:"RTT"}`
 
-La ligne d'appel dans `sb:tick` centralise les noms d'equipe, le nom de la case
+La ligne d'appel dans `sb:tick` centralise les noms d'equipe, la case `C2`
 et la reponse attendue. La reponse est le nom personnalise d'un papier depose
 dans le tonneau.

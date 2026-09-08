@@ -25,4 +25,4 @@ execute if score @s BingoAirStep matches 2 if score @s BingoAirState matches 7 r
 execute if score @s BingoAirStep matches 3 if score @s BingoAirState matches 15 run function sb:module/airship/advance {step:4}
 execute if score @s BingoAirStep matches 4 if score @s BingoAirState matches 31 run function sb:module/airship/advance {step:5}
 execute if score @s BingoAirStep matches 5 if score @s BingoAirState matches 63 run function sb:module/airship/advance {step:6}
-$execute if score @s BingoAirStep matches 6 if score @s BingoAirState matches 127 run function sb:module/airship/success {instance:"$(instance)"}
+$execute if score @s BingoAirStep matches 6 if score @s BingoAirState matches 127 run function sb:module/airship/success {instance:"$(instance)",teamName:"$(teamName)",teamColorBlock:"$(teamColorBlock)",teamColorText:"$(teamColorText)",enemyTeam:"$(enemyTeam)",caseName:"$(caseName)"}

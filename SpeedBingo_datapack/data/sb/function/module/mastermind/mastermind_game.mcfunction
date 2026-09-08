@@ -1,2 +1,2 @@
-$function sb:module/mastermind/instance_tick {instance:"Albertos",teamName:"$(teamA)",teamColor:"red",enemyTeam:"$(teamB)",enemyColor:"green",caseName:"$(caseName)"}
-$function sb:module/mastermind/instance_tick {instance:"RTT",teamName:"$(teamB)",teamColor:"green",enemyTeam:"$(teamA)",enemyColor:"red",caseName:"$(caseName)"}
+$function sb:module/mastermind/instance_tick {instance:"Albertos",teamName:"$(teamA)",teamColorBlock:"light_blue",teamColorText:"aqua",enemyTeam:"$(teamB)",enemyColorBlock:"lime",enemyColorText:"green",caseName:"$(caseName)"}
+$function sb:module/mastermind/instance_tick {instance:"RTT",teamName:"$(teamB)",teamColorBlock:"lime",teamColorText:"green",enemyTeam:"$(teamA)",enemyColorBlock:"light_blue",enemyColorText:"aqua",caseName:"$(caseName)"}

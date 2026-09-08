@@ -5,8 +5,9 @@ indications. Le datapack gere le chrono, les instances Albertos/RTT, la sortie,
 le retour sur la grille et l'attribution de la case.
 
 La teleportation selectionne un seul joueur par equipe avec le tag
-`BingoModule_Mastermind_Playing`. Tant que ce tag est present sur un membre de
+`BingoModule_B4_Playing`. Tant que ce tag est present sur un membre de
 l'equipe, aucun autre membre ne peut entrer dans le module Mastermind.
+La case de teleportation doit donc utiliser le `gameTag` `B4`.
 
 Marqueurs requis par instance : `Start`, `ValidationButton`, `Barrel`, `Finish`,
 `Answer1` a `Answer5`, `Proposal1` a `Proposal5`, `Test1` a `Test5` et `Return`.
