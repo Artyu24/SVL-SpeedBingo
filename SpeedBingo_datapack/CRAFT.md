@@ -14,7 +14,7 @@ Les marqueurs `Room`, `Submit` et `Chest1` a `Chest8` sont inclus. Seuls les
 marqueurs `BingoCraft_Albertos_Return` et `BingoCraft_RTT_Return` doivent etre
 places sur la grille finale.
 
-La case de teleportation doit utiliser le `gameTag` `Craft`. Un seul membre de
+La case de teleportation doit utiliser le `gameTag` `A2`. Un seul membre de
 chaque equipe peut jouer a la fois.
 
 Initialisation :

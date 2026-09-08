@@ -1,4 +1,3 @@
-tag @s add BingoModule_Airship_Playing
 tag @s add BingoAirship_Running
 
 # Chaque nouvelle tentative repart avec les sept leviers baisses.

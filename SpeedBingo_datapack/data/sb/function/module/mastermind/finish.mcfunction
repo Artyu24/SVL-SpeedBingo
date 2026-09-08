@@ -1,14 +1,10 @@
-function sb:timer/stop
-$execute if entity @s[tag=BingoMastermind_Win] run scoreboard players operation #Mastermind_$(teamName) BingoTime = @s BingoTime
-$execute if entity @s[tag=BingoMastermind_Win] run scoreboard players set #$(teamName) BingoValid_MM 1
-$execute unless entity @s[tag=BingoMastermind_Win] run scoreboard players set #$(teamName) BingoValid_MM 0
-$scoreboard players set #$(teamName) BingoDone_MM 1
+$execute if entity @s[tag=BingoMastermind_Win] at @s run function sb:case/timer/valid {teamWin:"$(teamName)",teamLose:"$(enemyTeam)",caseName:"$(caseName)",colorBlock:"$(teamColorBlock)",colorText:"$(teamColorText)"}
+execute unless entity @s[tag=BingoMastermind_Win] at @s run function sb:case/timer/cancel
 
 tag @s remove BingoMastermind_Running
 tag @s remove BingoMastermind_Ready
 tag @s remove BingoMastermind_Win
-tag @s remove BingoModule_Mastermind_Playing
-tag @s add BingoModule_Mastermind
+$tag @s remove BingoModule_$(caseName)_Playing
+$tag @s add BingoModule_$(caseName)
 
 $tp @s @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Return,limit=1]
-$execute if score #$(teamName) BingoDone_MM matches 1 if score #$(enemyTeam) BingoDone_MM matches 1 run function sb:module/mastermind/compare {teamA:"$(teamName)",colorA:"$(teamColor)",teamB:"$(enemyTeam)",colorB:"$(enemyColor)",caseName:"$(caseName)"}

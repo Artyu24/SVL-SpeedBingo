@@ -35,10 +35,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public final class SimonPlugin extends JavaPlugin implements Listener {
     private static final String PREFIX = "§6[Simon] §r";
-    private static final String PLAYING_TAG = "BingoModule_Simon_Playing";
+    private static final String PLAYING_TAG = "BingoModule_D1_Playing";
     private static final String RUNNING_TAG = "BingoSimon_Running";
-    private static final String TIMER_START_FUNCTION = "sb:timer/start";
-    private static final String TIMER_STOP_FUNCTION = "sb:timer/stop";
+    private static final String TIMER_CANCEL_FUNCTION = "sb:case/timer/cancel";
+    private static final String FINISH_FUNCTION = "sb:module/simon/finish";
     private static final String SCORE_OBJECTIVE = "BingoSimonScore";
     private static final int SEARCH_RADIUS = 16;
     private static final int SEARCH_HEIGHT = 8;
@@ -69,8 +69,10 @@ public final class SimonPlugin extends JavaPlugin implements Listener {
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this, this);
         for (Player player : Bukkit.getOnlinePlayers()) {
-            if (player.removeScoreboardTag(RUNNING_TAG)) {
-                runTimerFunction(player, TIMER_STOP_FUNCTION);
+            boolean staleSession = player.removeScoreboardTag(RUNNING_TAG);
+            staleSession |= player.removeScoreboardTag(PLAYING_TAG);
+            if (staleSession) {
+                cancelTimer(player);
             }
         }
         getLogger().info("Simon actif : sessions et timers individuels par joueur.");
@@ -81,12 +83,18 @@ public final class SimonPlugin extends JavaPlugin implements Listener {
         for (SimonGame game : new ArrayList<>(games.values())) {
             Player player = Bukkit.getPlayer(game.playerId);
             if (player != null) {
-                stopTimer(player, game);
+                cancelTimer(player);
                 player.removeScoreboardTag(RUNNING_TAG);
+                player.removeScoreboardTag(PLAYING_TAG);
             }
             cancelGame(game);
         }
         games.clear();
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            if (player.removeScoreboardTag(PLAYING_TAG)) {
+                cancelTimer(player);
+            }
+        }
     }
 
     @Override
@@ -184,6 +192,7 @@ public final class SimonPlugin extends JavaPlugin implements Listener {
         if (answer == SimonSession.Answer.WRONG) {
             int score = Math.max(0, game.session.round() - 1);
             updateScore(player, score);
+            runTimerFunction(player, FINISH_FUNCTION);
             player.playSound(player, Sound.ENTITY_VILLAGER_NO, 1f, .8f);
             endGame(
                     player.getUniqueId(),
@@ -204,14 +213,21 @@ public final class SimonPlugin extends JavaPlugin implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent event) {
         SimonGame game = games.remove(event.getPlayer().getUniqueId());
-        if (game != null) {
-            stopTimer(event.getPlayer(), game);
+        if (game != null || event.getPlayer().getScoreboardTags().contains(PLAYING_TAG)) {
+            cancelTimer(event.getPlayer());
             event.getPlayer().removeScoreboardTag(RUNNING_TAG);
+            event.getPlayer().removeScoreboardTag(PLAYING_TAG);
+        }
+        if (game != null) {
             cancelGame(game);
         }
     }
 
     private void begin(Player player, RoomLayout room) {
+        if (games.containsKey(player.getUniqueId())) {
+            player.sendMessage(PREFIX + "§eUne partie est déjà en cours.");
+            return;
+        }
         for (SimonGame running : games.values()) {
             if (!running.playerId.equals(player.getUniqueId()) && sameBlock(running.room.start, room.start)) {
                 player.sendMessage(PREFIX + "§cCette salle est déjà utilisée par un autre joueur.");
@@ -219,7 +235,6 @@ public final class SimonPlugin extends JavaPlugin implements Listener {
             }
         }
 
-        endGame(player.getUniqueId(), null);
         SimonGame game = new SimonGame(player.getUniqueId(), room);
         games.put(player.getUniqueId(), game);
         player.addScoreboardTag(RUNNING_TAG);
@@ -248,7 +263,6 @@ public final class SimonPlugin extends JavaPlugin implements Listener {
 
                 cancelCurrentTask(game, this);
                 player.sendMessage(PREFIX + "§aC'est parti !");
-                startTimer(player, game);
                 nextRound(game);
             }
         };
@@ -412,24 +426,14 @@ public final class SimonPlugin extends JavaPlugin implements Listener {
         }
     }
 
-    private void startTimer(Player player, SimonGame game) {
-        if (runTimerFunction(player, TIMER_START_FUNCTION)) {
-            game.timerRunning = true;
-        }
-    }
-
-    private void stopTimer(Player player, SimonGame game) {
-        if (!game.timerRunning) {
-            return;
-        }
-        runTimerFunction(player, TIMER_STOP_FUNCTION);
-        game.timerRunning = false;
+    private void cancelTimer(Player player) {
+        runTimerFunction(player, TIMER_CANCEL_FUNCTION);
     }
 
     private boolean runTimerFunction(Player player, String function) {
         boolean success = Bukkit.dispatchCommand(
                 Bukkit.getConsoleSender(),
-                "execute as " + player.getName() + " run function " + function
+                "execute as " + player.getName() + " at @s run function " + function
         );
         if (!success) {
             getLogger().warning("Impossible d'exécuter la fonction " + function + " pour " + player.getName() + '.');
@@ -449,19 +453,18 @@ public final class SimonPlugin extends JavaPlugin implements Listener {
 
     private void endGame(UUID id, String message) {
         SimonGame game = games.remove(id);
-        if (game == null) {
-            return;
-        }
-
         Player player = Bukkit.getPlayer(id);
         if (player != null) {
             if (message != null) {
                 player.sendMessage(PREFIX + message);
             }
-            stopTimer(player, game);
+            cancelTimer(player);
             player.removeScoreboardTag(RUNNING_TAG);
+            player.removeScoreboardTag(PLAYING_TAG);
         }
-        cancelGame(game);
+        if (game != null) {
+            cancelGame(game);
+        }
     }
 
     private void cancelGame(SimonGame game) {
@@ -513,7 +516,6 @@ public final class SimonPlugin extends JavaPlugin implements Listener {
         private final RoomLayout room;
         private final SimonSession session = new SimonSession();
         private BukkitRunnable task;
-        private boolean timerRunning;
 
         private SimonGame(UUID playerId, RoomLayout room) {
             this.playerId = playerId;

@@ -30,7 +30,7 @@ import java.util.UUID;
 public final class MastermindPlugin extends JavaPlugin implements Listener {
     private static final int CODE_LENGTH = 5;
     private static final int MAX_ATTEMPTS = 5;
-    private static final String PLAYING_TAG = "BingoModule_Mastermind_Playing";
+    private static final String PLAYING_TAG = "BingoModule_B4_Playing";
     private static final String READY_TAG = "BingoMastermind_Ready";
     private static final String WIN_TAG = "BingoMastermind_Win";
     private static final String RUNNING_TAG = "BingoMastermind_Running";

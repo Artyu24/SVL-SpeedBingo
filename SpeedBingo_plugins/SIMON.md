@@ -25,21 +25,26 @@ sont donc associes a leur couleur grace au bloc de beton place juste dessous.
 
 ## Demarrage et timer
 
-La teleportation du datapack selectionne un seul membre de chaque equipe avec
-le tag `BingoModule_Simon_Playing`. Le plugin refuse le demarrage pour tout
+La teleportation de la case D1 selectionne un seul membre de chaque equipe avec
+le tag `BingoModule_D1_Playing`. Le plugin refuse le demarrage pour tout
 joueur qui ne porte pas ce tag.
 
 Le joueur selectionne appuie sur le bouton en pierre noire polie de sa salle.
 Le plugin recherche les quatre tetes et les quatre boutons, ajoute le tag
-`BingoSimon_Running`, affiche `3`, `2`, `1` dans son chat, appelle
-`sb:timer/start` en tant que ce joueur, puis joue la premiere sequence.
+`BingoSimon_Running`, affiche `3`, `2`, `1` dans son chat, puis joue la
+premiere sequence. Le timer commun a deja ete lance par la case D1.
 
-L'objectif `BingoTime` contient un score distinct par joueur. Plusieurs salles
-peuvent donc fonctionner en parallele sans melanger leurs chronometres.
+L'objectif `BingoSimonScore` contient le nombre de series reussies. Apres la
+premiere erreur, les resultats des deux equipes sont compares : la serie la
+plus longue gagne et le temps le plus court departage une egalite.
 
 Chaque tete doit avoir une waxed copper bulb directement derriere elle. Le
 plugin allume et eteint ces quatre bulbs pour afficher la sequence. Aucun
 `block_display` n'est utilise.
 
-Le timer du joueur est arrete avec `sb:timer/stop` en cas d'erreur, d'arret
-manuel, de deconnexion ou d'arret du plugin.
+Le timer du joueur est arrete avec `sb:case/timer/cancel` en cas d'erreur,
+d'arret manuel, de deconnexion ou d'arret du plugin.
+
+Initialisation des resultats des deux equipes :
+
+`function sb:module/simon/init`

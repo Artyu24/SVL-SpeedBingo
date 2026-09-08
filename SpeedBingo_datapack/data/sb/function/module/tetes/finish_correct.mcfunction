@@ -1,4 +1,3 @@
-$scoreboard players operation #Tetes_$(teamName) BingoTime = @s BingoTime
-$scoreboard players set #$(teamName) BingoValid_Tetes 1
-tellraw @s [{"text":"Bonne reponse ! Temps : ","color":"green"},{"score":{"name":"@s","objective":"BingoTime"},"color":"yellow"},{"text":" ticks","color":"gray"}]
-$function sb:module/tetes/finish_common {instance:"$(instance)",teamName:"$(teamName)",teamColor:"$(teamColor)",enemyTeam:"$(enemyTeam)",enemyColor:"$(enemyColor)",caseName:"$(caseName)"}
+$execute at @s run function sb:case/timer/valid {teamWin:"$(teamName)",teamLose:"$(enemyTeam)",caseName:"$(caseName)",colorBlock:"$(teamColorBlock)",colorText:"$(teamColorText)"}
+tellraw @s {"text":"Bonne reponse !","color":"green"}
+$function sb:module/tetes/finish_common {instance:"$(instance)",teamName:"$(teamName)",caseName:"$(caseName)"}

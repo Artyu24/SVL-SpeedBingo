@@ -1,16 +1,24 @@
-# Chronometre global
+# Chronometre commun des cases
 
-Tous les modules utilisent l'objectif `BingoTime`. Le tick global incremente
-automatiquement les joueurs qui portent le tag `BingoTimer_Running`.
+Le chronometre commun utilise `BingoTimer_Tick`, `BingoTimer_Second` et
+`BingoTimer_Saved`. Le tick global appelle `sb:case/timer/tick`.
 
-Au demarrage d'un module, executer la fonction en tant que joueur :
+Le bloc en chaine conditionnel de chaque case lance le chrono uniquement apres
+une teleportation reussie :
 
-`function sb:timer/start`
+`function sb:case/timer/start {gameTag:"<case>",teamName:"<equipe>"}`
 
-A la fin ou lors d'une reinitialisation, l'executer de la meme facon :
+Une reussite appelle `sb:case/timer/valid` avec l'equipe gagnante, l'equipe
+adverse, le nom de la case et les couleurs. Un echec definitif ou un abandon
+appelle `sb:case/timer/cancel` depuis la position du joueur.
 
-`function sb:timer/stop`
+Correspondances des modules :
 
-Le score du joueur reste disponible dans `BingoTime` apres l'arret. Lorsqu'un
-module conserve un resultat d'equipe, son faux joueur doit inclure le nom du
-module (par exemple `#Tetes_RTT`) afin que deux modules ne s'ecrasent pas.
+- Simon : `D1`
+- Craft : `A2`
+- Tetes : `C2`
+- Leviers : `A3`
+- Mastermind : `B4`
+
+Simon conserve une regle speciale : la serie la plus longue gagne. Le temps le
+plus court ne sert qu'a departager une egalite de series.
