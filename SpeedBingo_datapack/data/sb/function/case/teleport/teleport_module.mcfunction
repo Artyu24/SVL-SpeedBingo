@@ -1,1 +1,1 @@
-$execute positioned ~ ~1 ~ as @p[distance=..2,gamemode=adventure] at @s run return run function sb:case/teleport/teleport_module_behaviour {teamName:"$(teamName)", gameTag:"$(gameTag)", moveX:"$(moveX)", returnMoveX:"$(returnMoveX)", tpCoord:"$(tpCoord)"}
+$execute positioned ~ ~1 ~ as @p[distance=..1,gamemode=adventure,team=$(teamName)] at @s run return run function sb:case/teleport/teleport_module_behaviour {teamName:"$(teamName)", gameTag:"$(gameTag)", moveX:"$(moveX)", returnMoveX:"$(returnMoveX)", tpCoord:"$(tpCoord)"}

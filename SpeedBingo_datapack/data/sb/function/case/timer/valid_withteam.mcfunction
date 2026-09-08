@@ -1,4 +1,4 @@
 $execute as @e[distance=..200,type=minecraft:marker,tag=$(caseName),tag=$(teamLose)Win,sort=nearest,limit=1] run function sb:case/case_validation {teamWin:"$(teamWin)", teamLose:"$(teamLose)", caseName:"$(caseName)", colorBlock:"$(colorBlock)", colorText:"$(colorText)"}
-$scoreboard players operation #$(caseName) BingoTimer_Saved = @p[distance=..5, gamemode=adventure] BingoTimer_Second
-$data modify entity @e[distance=..150, type=minecraft:text_display, tag=TextScore_$(caseName), limit=1] text set value [{score:{name:"#$(caseName)",objective:"BingoTimer_Saved"},color:"$(colorText)"},{text:"s",color:"$(colorText)"}]
+$scoreboard players operation #$(caseName) BingoTimer_Saved = @p[distance=..25, gamemode=adventure, team=$(teamWin)] BingoTimer_Second
+$data modify entity @e[distance=..200, type=minecraft:text_display, tag=TextScore_$(caseName), limit=1] text set value [{score:{name:"#$(caseName)",objective:"BingoTimer_Saved"},color:"$(colorText)"},{text:"s",color:"$(colorText)"}]
 return 1

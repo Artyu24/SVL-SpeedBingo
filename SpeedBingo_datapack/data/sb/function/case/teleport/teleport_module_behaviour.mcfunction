@@ -9,15 +9,16 @@ $execute if entity @s[tag=BingoModule_$(gameTag)] run title @s actionbar {"text"
 $execute if entity @s[tag=BingoModule_$(gameTag)] run return fail
 
 # Vérification 3 : Un coéquipier joue déjà dans ce module
-$execute if entity @a[distance=..150,team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run title @s actionbar {"text":"Un joueur de ton équipe est déjà dans ce module !","color":"red"}
-$execute if entity @a[distance=..150,team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run return fail
+$execute if entity @a[distance=..200,team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run title @s actionbar {"text":"Un joueur de ton équipe est déjà dans ce module !","color":"red"}
+$execute if entity @a[distance=..200,team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run return fail
 
 
 # --- PREPARATION A LA TELEPORTATION ---
 
 # On retire le tag aux autres joueurs proches pour éviter les conflits
-execute positioned ~ ~ ~ run tag @a[distance=..2,tag=BingoTPPad] remove BingoTPPad
+$execute positioned ~ ~ ~ run tag @a[distance=..2,team=$(teamName),tag=BingoTPPad] remove BingoTPPad
 tag @s add BingoTPPad
+$execute positioned ~ ~ ~ run scoreboard players set @a[distance=..2,team=$(teamName),tag=!BingoTPPad] BingoTP 0
 
 # Incrémentation du score
 scoreboard players add @s BingoTP 1
@@ -47,5 +48,5 @@ $function sb:case/head_add_team {teamTag:"$(teamName)", moveX:"$(moveX)", return
 scoreboard players reset @s BingoTP
 tag @s remove BingoTPPad
 
-$tp @s $(tpCoord)
+$tp @p[distance=..1,gamemode=adventure, team=$(teamName), tag=BingoModule_$(gameTag)_Playing] $(tpCoord)
 return 1

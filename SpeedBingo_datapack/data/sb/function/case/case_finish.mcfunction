@@ -1,0 +1,2 @@
+$tag @p[distance=..25,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] add BingoModule_$(caseName)
+$tag @p[distance=..25,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] remove BingoModule_$(caseName)_Playing
