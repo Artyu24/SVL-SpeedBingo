@@ -1,4 +1,4 @@
-execute as @a[tag=BingoSimon_Running] at @s run function sb:case/timer/cancel
+execute as @a[tag=BingoSimon_Running] at @s run function sb:case/timer/cancel {caseName:"D1"}
 tag @a remove BingoSimon_Running
 tag @a remove BingoModule_D1_Playing
 tag @a remove BingoModule_D1
@@ -9,3 +9,5 @@ scoreboard players set #Simon_Albertos BingoSimonScore 0
 scoreboard players set #Simon_RTT BingoSimonScore 0
 scoreboard players set #SimonTime_Albertos BingoTimer_Second 0
 scoreboard players set #SimonTime_RTT BingoTimer_Second 0
+
+function simon2:init

@@ -1,0 +1,14 @@
+$tag @a[tag=Simon2_$(instance)_Player] remove Simon2_$(instance)_Player
+$tag @s add Simon2_$(instance)_Player
+tag @s add BingoSimon_Running
+scoreboard players set @s BingoSimonScore 0
+
+$data modify storage simon2:games $(instance).sequence set value []
+$function simon2:instance/add_color {instance:"$(instance)"}
+
+$scoreboard players set @e[type=minecraft:marker,tag=Simon2_$(instance)_Room,limit=1] Simon2State 1
+$scoreboard players set @e[type=minecraft:marker,tag=Simon2_$(instance)_Room,limit=1] Simon2Timer 61
+$scoreboard players set @e[type=minecraft:marker,tag=Simon2_$(instance)_Room,limit=1] Simon2Phase 0
+$scoreboard players set @e[type=minecraft:marker,tag=Simon2_$(instance)_Room,limit=1] Simon2Cooldown 0
+
+tellraw @s [{"text":"[Simon2] ","color":"gold"},{"text":"Observe puis reproduis la sequence.","color":"green"}]
