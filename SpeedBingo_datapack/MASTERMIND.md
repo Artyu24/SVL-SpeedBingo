@@ -10,9 +10,8 @@ l'equipe, aucun autre membre ne peut entrer dans le module Mastermind.
 La case de teleportation doit donc utiliser le `gameTag` `B4`.
 
 Marqueurs requis par instance : `Start`, `ValidationButton`, `Barrel`, `Finish`,
-`Answer1` a `Answer5`, `Proposal1` a `Proposal5`, `Test1` a `Test5` et `Return`.
-Tous sont inclus dans les schematics sauf `BingoMastermind_Albertos_Return` et
-`BingoMastermind_RTT_Return`, qui doivent etre places sur la grille finale.
+`Answer1` a `Answer5`, `Proposal1` a `Proposal5` et `Test1` a `Test5`.
+Le retour utilise automatiquement le marqueur `B4` le plus proche sur la grille.
 
 Les versions redécorées prêtes à coller avec les entités (`//paste -e`) sont :
 

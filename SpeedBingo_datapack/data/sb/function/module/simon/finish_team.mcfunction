@@ -7,4 +7,6 @@ tag @s add BingoModule_D1
 
 $tellraw @s [{"text":"Resultat Simon : ","color":"gold"},{"score":{"name":"#Simon_$(teamName)","objective":"BingoSimonScore"},"color":"yellow"},{"text":" series en ","color":"gold"},{"score":{"name":"#SimonTime_$(teamName)","objective":"BingoTimer_Second"},"color":"yellow"},{"text":"s","color":"gold"}]
 
+$function sb:case/teleport/tpback {caseName:"D1"}
+
 $execute if score #$(teamName) BingoDone_Simon matches 1 if score #$(enemyTeam) BingoDone_Simon matches 1 run function sb:module/simon/compare

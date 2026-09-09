@@ -21,7 +21,8 @@ Marqueurs requis pour `<equipe>` egal a `Albertos` ou `RTT` :
 - `BingoTetes_<equipe>_Wall2`
 - `BingoTetes_<equipe>_Barrel`
 - `BingoTetes_<equipe>_Finish`
-- `BingoTetes_<equipe>_Return` (a placer sur la grille finale)
+
+Le retour utilise automatiquement le marqueur `C2` le plus proche sur la grille.
 
 Initialisation :
 

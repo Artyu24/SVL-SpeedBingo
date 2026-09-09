@@ -10,9 +10,8 @@ Schematics pretes a coller avec les entites (`//paste -e`) :
 - `SpeedBingo_schematics/craft/salle_craft_Albertos_marqueurs.schem` pour Albertos ;
 - `SpeedBingo_schematics/craft/salle_craft_RTT_marqueurs.schem` pour RTT.
 
-Les marqueurs `Room`, `Submit` et `Chest1` a `Chest8` sont inclus. Seuls les
-marqueurs `BingoCraft_Albertos_Return` et `BingoCraft_RTT_Return` doivent etre
-places sur la grille finale.
+Les marqueurs `Room`, `Submit` et `Chest1` a `Chest8` sont inclus. Le retour
+utilise automatiquement le marqueur `A2` le plus proche sur la grille.
 
 La case de teleportation doit utiliser le `gameTag` `A2`. Un seul membre de
 chaque equipe peut jouer a la fois.

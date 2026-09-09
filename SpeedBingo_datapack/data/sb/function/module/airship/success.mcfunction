@@ -9,6 +9,6 @@ $particle minecraft:totem_of_undying ~ ~1 ~ 0.5 0.8 0.5 0.1 50 force @a[tag=Bing
 
 $tag @a[tag=BingoAirship_$(instance)_Success] add BingoModule_$(caseName)
 $tag @a[tag=BingoAirship_$(instance)_Success] remove BingoAirship_Running
-$tp @a[tag=BingoAirship_$(instance)_Success,limit=1] @e[type=minecraft:marker,tag=BingoAirship_$(instance)_Exit,limit=1]
+$execute as @a[tag=BingoAirship_$(instance)_Success,limit=1] at @s run function sb:case/teleport/tpback {caseName:"$(caseName)"}
 $tag @a[tag=BingoAirship_$(instance)_Success] remove BingoModule_$(caseName)_Playing
 $tag @a[tag=BingoAirship_$(instance)_Success] remove BingoAirship_$(instance)_Success
