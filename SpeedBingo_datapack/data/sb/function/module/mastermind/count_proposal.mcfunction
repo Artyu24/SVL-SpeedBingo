@@ -1,0 +1,10 @@
+execute if score @s BingoMMColor matches 1 run scoreboard players add #MMGuess1 BingoMMCalc 1
+execute if score @s BingoMMColor matches 2 run scoreboard players add #MMGuess2 BingoMMCalc 1
+execute if score @s BingoMMColor matches 3 run scoreboard players add #MMGuess3 BingoMMCalc 1
+execute if score @s BingoMMColor matches 4 run scoreboard players add #MMGuess4 BingoMMCalc 1
+execute if score @s BingoMMColor matches 5 run scoreboard players add #MMGuess5 BingoMMCalc 1
+execute if score @s BingoMMColor matches 6 run scoreboard players add #MMGuess6 BingoMMCalc 1
+execute if score @s BingoMMColor matches 7 run scoreboard players add #MMGuess7 BingoMMCalc 1
+execute if score @s BingoMMColor matches 8 run scoreboard players add #MMGuess8 BingoMMCalc 1
+execute if score @s BingoMMColor matches 9 run scoreboard players add #MMGuess9 BingoMMCalc 1
+execute if score @s BingoMMColor matches 10 run scoreboard players add #MMGuess10 BingoMMCalc 1

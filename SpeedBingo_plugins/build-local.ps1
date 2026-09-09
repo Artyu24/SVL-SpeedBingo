@@ -16,6 +16,12 @@ $classes = Join-Path $buildRoot 'classes'
 $resources = Join-Path $buildRoot 'resources'
 $libs = Join-Path $buildRoot 'libs'
 
+if (Test-Path -LiteralPath $classes) {
+    Remove-Item -LiteralPath $classes -Recurse -Force
+}
+if (Test-Path -LiteralPath $resources) {
+    Remove-Item -LiteralPath $resources -Recurse -Force
+}
 New-Item -ItemType Directory -Force -Path $classes, $resources, $libs | Out-Null
 $sources = Get-ChildItem -LiteralPath (Join-Path $PSScriptRoot 'src\main\java') -Recurse -Filter '*.java'
 javac --release 21 -encoding UTF-8 -cp $classpath -d $classes $sources.FullName
@@ -29,12 +35,3 @@ $jarPath = Join-Path $libs 'speed-bingo-simon-1.0.0.jar'
 jar --create --file $jarPath -C $classes . -C $resources .
 if ($LASTEXITCODE -ne 0) { throw 'Échec de la création du JAR.' }
 Write-Output $jarPath
-
-$mastermindResources = Join-Path $buildRoot 'mastermind-resources'
-New-Item -ItemType Directory -Force -Path $mastermindResources | Out-Null
-$mastermindYml = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'src\mastermind\resources\plugin.yml') -Raw
-$mastermindYml.Replace('${version}', '1.0.0') | Set-Content -LiteralPath (Join-Path $mastermindResources 'plugin.yml') -Encoding UTF8
-$mastermindJarPath = Join-Path $libs 'speed-bingo-mastermind-1.0.0.jar'
-jar --create --file $mastermindJarPath -C $classes . -C $mastermindResources .
-if ($LASTEXITCODE -ne 0) { throw 'Échec de la création du JAR Mastermind.' }
-Write-Output $mastermindJarPath
