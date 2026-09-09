@@ -1,0 +1,13 @@
+# Relache immediatement le bouton sans modifier son orientation ni sa face.
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=floor,facing=north,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=floor,facing=north,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=floor,facing=south,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=floor,facing=south,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=floor,facing=east,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=floor,facing=east,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=floor,facing=west,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=floor,facing=west,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=ceiling,facing=north,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=ceiling,facing=north,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=ceiling,facing=south,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=ceiling,facing=south,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=ceiling,facing=east,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=ceiling,facing=east,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=ceiling,facing=west,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=ceiling,facing=west,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=wall,facing=north,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=wall,facing=north,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=wall,facing=south,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=wall,facing=south,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=wall,facing=east,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=wall,facing=east,powered=false]
+execute if block ~ ~ ~ minecraft:pale_oak_button[face=wall,facing=west,powered=true] run setblock ~ ~ ~ minecraft:pale_oak_button[face=wall,facing=west,powered=false]
