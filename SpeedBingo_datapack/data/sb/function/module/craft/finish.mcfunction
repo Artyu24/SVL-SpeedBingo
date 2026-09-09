@@ -9,4 +9,4 @@ $execute at @e[type=minecraft:marker,tag=BingoCraft_$(instance)_Submit,limit=1] 
 title @s title {"text":"ARBALETE VALIDEE !","color":"green","bold":true}
 title @s subtitle {"text":"Tu peux sortir de la salle","color":"yellow"}
 playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1
-$tp @s @e[type=minecraft:marker,tag=BingoCraft_$(instance)_Return,limit=1]
+$function sb:case/teleport/tpback {caseName:"$(caseName)"}

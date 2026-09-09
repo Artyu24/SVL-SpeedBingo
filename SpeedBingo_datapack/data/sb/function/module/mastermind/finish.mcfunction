@@ -7,4 +7,4 @@ tag @s remove BingoMastermind_Win
 $tag @s remove BingoModule_$(caseName)_Playing
 $tag @s add BingoModule_$(caseName)
 
-$tp @s @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Return,limit=1]
+$function sb:case/teleport/tpback {caseName:"$(caseName)"}

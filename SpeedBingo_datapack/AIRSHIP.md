@@ -6,7 +6,7 @@ dans l'ordre `1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7`.
 Un levier actionne hors ordre, ou un ancien levier rabaisse, remet
 immediatement toute la sequence a zero, replace les sept leviers dans leur etat
 initial et reteleporte le joueur sur l'echelle. Apres le levier 7, le joueur
-est teleporte au marqueur de sortie situe hors de la piece.
+est teleporte au marqueur `A3` le plus proche sur la grille.
 
 ## Schematics
 
