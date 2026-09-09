@@ -14,3 +14,7 @@ $summon minecraft:marker ~ ~1 ~ {Tags:[$(caseName)]}
 $summon minecraft:text_display ~ ~4.5 ~ {Tags:[TextScore_$(caseName)], background: 0, billboard: "vertical", default_background: 0b, transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [4.0f, 4.0f, 4.0f], translation: [0.0f, 0.0f, 0.0f]}}
 
 execute positioned ~ ~1 ~ run fill ~-4 ~ ~-4 ~4 ~ ~4 minecraft:white_concrete replace #survisland:concretes
+
+#Remove les tags aux joueurs
+$tag @a remove BingoModule_$(caseName)
+$tag @a remove BingoModule_$(caseName)_Playing
