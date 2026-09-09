@@ -1,8 +1,7 @@
 $execute at @s run function sb:case/timer/valid {teamWin:"$(teamName)",teamLose:"$(enemyTeam)",caseName:"$(caseName)",colorBlock:"$(teamColorBlock)",colorText:"$(teamColorText)"}
+$function sb:case/case_finish {caseName:"$(caseName)"}
 
 tag @s remove BingoCraft_Running
-$tag @s remove BingoModule_$(caseName)_Playing
-$tag @s add BingoModule_$(caseName)
 
 $execute at @e[type=minecraft:marker,tag=BingoCraft_$(instance)_Submit,limit=1] run data remove block ~ ~ ~ Items[{id:"minecraft:crossbow"}]
 

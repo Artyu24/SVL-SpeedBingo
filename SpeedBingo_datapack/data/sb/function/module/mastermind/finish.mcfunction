@@ -1,5 +1,7 @@
+gamemode adventure @s
 $execute if entity @s[tag=BingoMastermind_Win] at @s run function sb:case/timer/valid {teamWin:"$(teamName)",teamLose:"$(enemyTeam)",caseName:"$(caseName)",colorBlock:"$(teamColorBlock)",colorText:"$(teamColorText)"}
 $execute unless entity @s[tag=BingoMastermind_Win] at @s run function sb:case/timer/cancel {caseName:"$(caseName)"}
+$function sb:case/case_finish {caseName:"$(caseName)"}
 
 $function sb:module/mastermind/clear_proposal {instance:"$(instance)"}
 
@@ -13,7 +15,4 @@ scoreboard players reset @s BingoMMMis
 scoreboard players reset @s BingoMMWrong
 scoreboard players reset @s BingoMMValid
 scoreboard players reset @s BingoMMCooldown
-$tag @s remove BingoModule_$(caseName)_Playing
-$tag @s add BingoModule_$(caseName)
-
 $function sb:case/teleport/tpback {caseName:"$(caseName)"}
