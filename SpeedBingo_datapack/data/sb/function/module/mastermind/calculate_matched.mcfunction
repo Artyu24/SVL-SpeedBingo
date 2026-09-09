@@ -1,0 +1,32 @@
+scoreboard players set @s BingoMMMatched 0
+
+scoreboard players operation #MMMin1 BingoMMCalc = #MMSol1 BingoMMCalc
+execute if score #MMGuess1 BingoMMCalc < #MMMin1 BingoMMCalc run scoreboard players operation #MMMin1 BingoMMCalc = #MMGuess1 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin1 BingoMMCalc
+scoreboard players operation #MMMin2 BingoMMCalc = #MMSol2 BingoMMCalc
+execute if score #MMGuess2 BingoMMCalc < #MMMin2 BingoMMCalc run scoreboard players operation #MMMin2 BingoMMCalc = #MMGuess2 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin2 BingoMMCalc
+scoreboard players operation #MMMin3 BingoMMCalc = #MMSol3 BingoMMCalc
+execute if score #MMGuess3 BingoMMCalc < #MMMin3 BingoMMCalc run scoreboard players operation #MMMin3 BingoMMCalc = #MMGuess3 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin3 BingoMMCalc
+scoreboard players operation #MMMin4 BingoMMCalc = #MMSol4 BingoMMCalc
+execute if score #MMGuess4 BingoMMCalc < #MMMin4 BingoMMCalc run scoreboard players operation #MMMin4 BingoMMCalc = #MMGuess4 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin4 BingoMMCalc
+scoreboard players operation #MMMin5 BingoMMCalc = #MMSol5 BingoMMCalc
+execute if score #MMGuess5 BingoMMCalc < #MMMin5 BingoMMCalc run scoreboard players operation #MMMin5 BingoMMCalc = #MMGuess5 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin5 BingoMMCalc
+scoreboard players operation #MMMin6 BingoMMCalc = #MMSol6 BingoMMCalc
+execute if score #MMGuess6 BingoMMCalc < #MMMin6 BingoMMCalc run scoreboard players operation #MMMin6 BingoMMCalc = #MMGuess6 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin6 BingoMMCalc
+scoreboard players operation #MMMin7 BingoMMCalc = #MMSol7 BingoMMCalc
+execute if score #MMGuess7 BingoMMCalc < #MMMin7 BingoMMCalc run scoreboard players operation #MMMin7 BingoMMCalc = #MMGuess7 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin7 BingoMMCalc
+scoreboard players operation #MMMin8 BingoMMCalc = #MMSol8 BingoMMCalc
+execute if score #MMGuess8 BingoMMCalc < #MMMin8 BingoMMCalc run scoreboard players operation #MMMin8 BingoMMCalc = #MMGuess8 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin8 BingoMMCalc
+scoreboard players operation #MMMin9 BingoMMCalc = #MMSol9 BingoMMCalc
+execute if score #MMGuess9 BingoMMCalc < #MMMin9 BingoMMCalc run scoreboard players operation #MMMin9 BingoMMCalc = #MMGuess9 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin9 BingoMMCalc
+scoreboard players operation #MMMin10 BingoMMCalc = #MMSol10 BingoMMCalc
+execute if score #MMGuess10 BingoMMCalc < #MMMin10 BingoMMCalc run scoreboard players operation #MMMin10 BingoMMCalc = #MMGuess10 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin10 BingoMMCalc
