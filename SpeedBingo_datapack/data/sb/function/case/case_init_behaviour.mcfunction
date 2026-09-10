@@ -18,3 +18,6 @@ execute positioned ~ ~1 ~ run fill ~-4 ~ ~-4 ~4 ~ ~4 minecraft:white_concrete re
 #Remove les tags aux joueurs
 $tag @a remove BingoModule_$(caseName)
 $tag @a remove BingoModule_$(caseName)_Playing
+
+#Reset les maps
+$execute as @e[distance=..100,type=minecraft:block_display,tag=BingoDisplay_$(caseName)] run data modify entity @s block_state.Name set value "minecraft:white_concrete"
