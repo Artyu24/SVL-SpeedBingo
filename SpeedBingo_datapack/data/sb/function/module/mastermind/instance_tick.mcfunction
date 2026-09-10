@@ -1,6 +1,8 @@
 $execute at @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Start,limit=1] run gamemode survival @a[team=$(teamName),tag=BingoModule_$(caseName)_Playing,distance=..40]
 
-$execute at @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Start,limit=1] as @a[team=$(teamName),tag=BingoModule_$(caseName)_Playing,tag=!BingoMastermind_Running,scores={BingoMMCooldown=0},distance=..4,sort=nearest,limit=1] run function sb:module/mastermind/player_start {instance:"$(instance)",teamName:"$(teamName)",caseName:"$(caseName)"}
+# Le joueur peut arriver ailleurs que juste sur le marqueur Start. Toute personne
+# de la bonne equipe presente dans cette salle doit donc initialiser sa partie.
+$execute at @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Start,limit=1] as @a[team=$(teamName),tag=BingoModule_$(caseName)_Playing,tag=!BingoMastermind_Running,scores={BingoMMCooldown=0},distance=..40,sort=nearest,limit=1] run function sb:module/mastermind/player_start {instance:"$(instance)",teamName:"$(teamName)",caseName:"$(caseName)"}
 
 $execute at @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_ValidationButton,limit=1] run function sb:module/mastermind/validation_scan {instance:"$(instance)"}
 
