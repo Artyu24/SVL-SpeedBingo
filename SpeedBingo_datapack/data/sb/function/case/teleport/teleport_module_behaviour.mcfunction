@@ -43,6 +43,12 @@ execute if score @s BingoTP matches ..39 run return fail
 # --- MOMENT DE LA TELEPORTATION (Score >= 40) ---
 
 $tag @s add BingoModule_$(gameTag)_Playing
+
+# Pour Simon uniquement, memorise le marqueur D1 exact utilise par l'equipe.
+# Les autres modules, notamment Elytra, conservent leur comportement actuel.
+$execute if entity @s[tag=BingoModule_D1_Playing] run tag @e[type=minecraft:marker,tag=BingoReturn_$(teamName)] remove BingoReturn_$(teamName)
+$execute if entity @s[tag=BingoModule_D1_Playing] run tag @e[type=minecraft:marker,tag=D1,distance=..10,sort=nearest,limit=1] add BingoReturn_$(teamName)
+
 $function sb:case/head_add_team {teamTag:"$(teamName)", moveX:"$(moveX)", returnMoveX:"$(returnMoveX)"}
 
 scoreboard players reset @s BingoTP
