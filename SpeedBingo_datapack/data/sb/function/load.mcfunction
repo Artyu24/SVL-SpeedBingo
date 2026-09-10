@@ -17,6 +17,8 @@ scoreboard objectives add BingoScore_Elytra dummy
     #Simon
 scoreboard objectives add BingoSimonScore dummy
 scoreboard objectives add BingoDone_Simon dummy
+    #Tetes
+scoreboard objectives add BingoTetesButton minecraft.used:minecraft.stone_button
     #Mastermind datapack
 scoreboard objectives add BingoMMColor dummy
 scoreboard objectives add BingoMMAttempt dummy

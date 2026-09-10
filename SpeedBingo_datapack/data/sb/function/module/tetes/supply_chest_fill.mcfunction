@@ -1,5 +1,4 @@
-# Le baril de reponse n'est jamais concerne par cette fonction.
-data remove block ~ ~ ~ Items[{id:"minecraft:paper"}]
-data remove block ~ ~ ~ Items[{id:"minecraft:experience_bottle"}]
+# Le coffre de materiel ne contient que ces deux objets.
+data modify block ~ ~ ~ Items set value []
 item replace block ~ ~ ~ container.0 with minecraft:paper 1
 item replace block ~ ~ ~ container.1 with minecraft:experience_bottle 1

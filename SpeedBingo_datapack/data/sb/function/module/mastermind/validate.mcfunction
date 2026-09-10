@@ -64,4 +64,3 @@ execute unless score @s BingoMMExact matches 5 run tellraw @s [{"text":"[Masterm
 
 execute if score @s BingoMMAttempt matches 5.. run tag @s add BingoMastermind_Ready
 execute if score @s BingoMMAttempt matches 5.. unless score @s BingoMMExact matches 5 run tellraw @s [{"text":"[Mastermind] ","color":"gold"},{"text":"Les 5 essais sont terminés. Prends la plaque en or pour sortir.","color":"aqua"}]
-execute if score @s BingoMMAttempt matches 5.. run playsound minecraft:block.beacon.activate master @s ~ ~ ~ 0.8 1.2
