@@ -4,8 +4,10 @@ $execute unless entity @s[tag=BingoMastermind_Win] at @s run function sb:case/ti
 $execute if entity @s[tag=BingoMastermind_Win] run tellraw @s [{"text":"Mastermind - ","color":"gold"},{"text":"combinaison trouvée en ","color":"green"},{"score":{"name":"@s","objective":"BingoTimer_Second"},"color":"yellow"},{"text":" secondes","color":"green"}]
 execute unless entity @s[tag=BingoMastermind_Win] run tellraw @s [{"text":"Mastermind - ","color":"gold"},{"text":"combinaison non trouvée","color":"red"}]
 $function sb:case/case_finish {caseName:"$(caseName)"}
+$function sb:case/teleport/tpback {caseName:"$(caseName)"}
 
-$function sb:module/mastermind/clear_proposal {instance:"$(instance)"}
+$function sb:module/mastermind/clear_play_area {instance:"$(instance)"}
+$execute at @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Barrel,limit=1] run function sb:module/mastermind/refill_barrel
 
 tag @s remove BingoMastermind_Running
 tag @s remove BingoMastermind_Ready
@@ -17,4 +19,3 @@ scoreboard players reset @s BingoMMMis
 scoreboard players reset @s BingoMMWrong
 scoreboard players reset @s BingoMMValid
 scoreboard players reset @s BingoMMCooldown
-$function sb:case/teleport/tpback {caseName:"$(caseName)"}
