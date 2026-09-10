@@ -2,6 +2,8 @@ $tag @a[tag=Simon2_$(instance)_Player] remove Simon2_$(instance)_Player
 $tag @s add Simon2_$(instance)_Player
 tag @s add BingoSimon_Running
 scoreboard players set @s BingoSimonScore 0
+execute if entity @s[team=Albertos] at @s run function sb:case/timer/start {gameTag:"D1",teamName:"Albertos"}
+execute if entity @s[team=RTT] at @s run function sb:case/timer/start {gameTag:"D1",teamName:"RTT"}
 
 $data modify storage simon2:games $(instance).sequence set value []
 $function simon2:instance/add_color {instance:"$(instance)"}

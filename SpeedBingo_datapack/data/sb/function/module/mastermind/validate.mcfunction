@@ -58,9 +58,10 @@ $execute if score @s BingoMMAttempt matches 5 run function sb:module/mastermind/
 $function sb:module/mastermind/clear_proposal {instance:"$(instance)"}
 
 execute if score @s BingoMMExact matches 5 run tag @s add BingoMastermind_Win
-execute if score @s BingoMMExact matches 5 run tellraw @s [{"text":"[Mastermind] ","color":"gold"},{"text":"Combinaison trouvée ! Termine les 5 essais.","color":"green"}]
+execute if score @s BingoMMExact matches 5 run tag @s add BingoMastermind_Ready
+execute if score @s BingoMMExact matches 5 run tellraw @s [{"text":"[Mastermind] ","color":"gold"},{"text":"Combinaison trouvée ! Prends la plaque en or pour sortir.","color":"green"}]
 execute unless score @s BingoMMExact matches 5 run tellraw @s [{"text":"[Mastermind] Essai ","color":"gold"},{"score":{"name":"@s","objective":"BingoMMAttempt"},"color":"yellow"},{"text":"/5 : ","color":"gray"},{"score":{"name":"@s","objective":"BingoMMExact"},"color":"green"},{"text":" bien placées - ","color":"gray"},{"score":{"name":"@s","objective":"BingoMMMis"},"color":"yellow"},{"text":" mal placées - ","color":"gray"},{"score":{"name":"@s","objective":"BingoMMWrong"},"color":"red"},{"text":" incorrectes","color":"gray"}]
 
 execute if score @s BingoMMAttempt matches 5.. run tag @s add BingoMastermind_Ready
-execute if score @s BingoMMAttempt matches 5.. run tellraw @s [{"text":"[Mastermind] ","color":"gold"},{"text":"Les 5 essais sont terminés. Prends la plaque en or pour sortir.","color":"aqua"}]
+execute if score @s BingoMMAttempt matches 5.. unless score @s BingoMMExact matches 5 run tellraw @s [{"text":"[Mastermind] ","color":"gold"},{"text":"Les 5 essais sont terminés. Prends la plaque en or pour sortir.","color":"aqua"}]
 execute if score @s BingoMMAttempt matches 5.. run playsound minecraft:block.beacon.activate master @s ~ ~ ~ 0.8 1.2
