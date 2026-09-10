@@ -1,3 +1,5 @@
-# Une reponse correcte est un papier dont le nom personnalise correspond a answer.
+# Accepte les deux serialisations produites selon la version du serveur :
+# le composant JSON complet et sa forme texte abregee utilisee par l'enclume.
 $execute at @e[type=minecraft:marker,tag=BingoTetes_$(instance)_Barrel,limit=1] if data block ~ ~ ~ Items[{id:"minecraft:paper",components:{"minecraft:custom_name":'{"text":"$(answer)"}'}}] run return run function sb:module/tetes/finish_correct {instance:"$(instance)",teamName:"$(teamName)",teamColorBlock:"$(teamColorBlock)",teamColorText:"$(teamColorText)",enemyTeam:"$(enemyTeam)",caseName:"$(caseName)"}
+$execute at @e[type=minecraft:marker,tag=BingoTetes_$(instance)_Barrel,limit=1] if data block ~ ~ ~ Items[{id:"minecraft:paper",components:{"minecraft:custom_name":'"$(answer)"'}}] run return run function sb:module/tetes/finish_correct {instance:"$(instance)",teamName:"$(teamName)",teamColorBlock:"$(teamColorBlock)",teamColorText:"$(teamColorText)",enemyTeam:"$(enemyTeam)",caseName:"$(caseName)"}
 $function sb:module/tetes/finish_wrong {instance:"$(instance)",teamName:"$(teamName)",caseName:"$(caseName)"}

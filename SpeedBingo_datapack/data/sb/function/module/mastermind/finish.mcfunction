@@ -1,6 +1,8 @@
 gamemode adventure @s
-$execute if entity @s[tag=BingoMastermind_Win] at @s run function sb:case/timer/valid {teamWin:"$(teamName)",teamLose:"$(enemyTeam)",caseName:"$(caseName)",colorBlock:"$(teamColorBlock)",colorText:"$(teamColorText)"}
+$execute if entity @s[tag=BingoMastermind_Win] at @s run function sb:case/timer/valid_silent {teamWin:"$(teamName)",teamLose:"$(enemyTeam)",caseName:"$(caseName)",colorBlock:"$(teamColorBlock)",colorText:"$(teamColorText)"}
 $execute unless entity @s[tag=BingoMastermind_Win] at @s run function sb:case/timer/cancel {caseName:"$(caseName)"}
+$execute if entity @s[tag=BingoMastermind_Win] run tellraw @s [{"text":"Mastermind - ","color":"gold"},{"text":"combinaison trouvée en ","color":"green"},{"score":{"name":"@s","objective":"BingoTimer_Second"},"color":"yellow"},{"text":" secondes","color":"green"}]
+execute unless entity @s[tag=BingoMastermind_Win] run tellraw @s [{"text":"Mastermind - ","color":"gold"},{"text":"combinaison non trouvée","color":"red"}]
 $function sb:case/case_finish {caseName:"$(caseName)"}
 
 $function sb:module/mastermind/clear_proposal {instance:"$(instance)"}
