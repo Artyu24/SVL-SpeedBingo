@@ -8,3 +8,4 @@ execute if block ~ ~ ~ minecraft:light_blue_wool run scoreboard players set @s B
 execute if block ~ ~ ~ minecraft:lime_wool run scoreboard players set @s BingoMMColor 8
 execute if block ~ ~ ~ minecraft:black_wool run scoreboard players set @s BingoMMColor 9
 execute if block ~ ~ ~ minecraft:red_wool run scoreboard players set @s BingoMMColor 10
+execute if block ~ ~ ~ minecraft:pink_wool run scoreboard players set @s BingoMMColor 11
