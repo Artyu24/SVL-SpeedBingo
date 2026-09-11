@@ -1,0 +1,9 @@
+# Efface les cinq laines et les cinq indices de la ligne sans toucher au mur.
+execute if block ~ ~ ~ minecraft:player_wall_head[facing=east] run fill ~ ~ ~-1 ~ ~ ~-5 minecraft:air
+execute if block ~ ~ ~ minecraft:player_wall_head[facing=east] run fill ~ ~ ~-7 ~ ~ ~-11 minecraft:air
+execute if block ~ ~ ~ minecraft:player_wall_head[facing=west] run fill ~ ~ ~1 ~ ~ ~5 minecraft:air
+execute if block ~ ~ ~ minecraft:player_wall_head[facing=west] run fill ~ ~ ~7 ~ ~ ~11 minecraft:air
+execute if block ~ ~ ~ minecraft:player_wall_head[facing=south] run fill ~1 ~ ~ ~5 ~ ~ minecraft:air
+execute if block ~ ~ ~ minecraft:player_wall_head[facing=south] run fill ~7 ~ ~ ~11 ~ ~ minecraft:air
+execute if block ~ ~ ~ minecraft:player_wall_head[facing=north] run fill ~-1 ~ ~ ~-5 ~ ~ minecraft:air
+execute if block ~ ~ ~ minecraft:player_wall_head[facing=north] run fill ~-7 ~ ~ ~-11 ~ ~ minecraft:air

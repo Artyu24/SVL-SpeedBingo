@@ -1,0 +1,10 @@
+execute if block ~ ~ ~ minecraft:purple_wool run scoreboard players set @s BingoMMColor 1
+execute if block ~ ~ ~ minecraft:white_wool run scoreboard players set @s BingoMMColor 2
+execute if block ~ ~ ~ minecraft:blue_wool run scoreboard players set @s BingoMMColor 3
+execute if block ~ ~ ~ minecraft:cyan_wool run scoreboard players set @s BingoMMColor 4
+execute if block ~ ~ ~ minecraft:yellow_wool run scoreboard players set @s BingoMMColor 5
+execute if block ~ ~ ~ minecraft:orange_wool run scoreboard players set @s BingoMMColor 6
+execute if block ~ ~ ~ minecraft:light_blue_wool run scoreboard players set @s BingoMMColor 7
+execute if block ~ ~ ~ minecraft:lime_wool run scoreboard players set @s BingoMMColor 8
+execute if block ~ ~ ~ minecraft:black_wool run scoreboard players set @s BingoMMColor 9
+execute if block ~ ~ ~ minecraft:red_wool run scoreboard players set @s BingoMMColor 10

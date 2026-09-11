@@ -1,5 +1,3 @@
-gamemode adventure @a[tag=BingoMastermind_Running]
-gamemode adventure @a[tag=BingoModule_B4_Playing]
 execute as @a[tag=BingoMastermind_Running] at @s run function sb:case/timer/cancel {caseName:"B4"}
 execute as @a[tag=BingoModule_B4_Playing] at @s run function sb:case/case_finish {caseName:"B4"}
 tag @a remove BingoMastermind_Running

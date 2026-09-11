@@ -1,0 +1,10 @@
+fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air replace minecraft:white_wool
+fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air replace minecraft:lime_wool
+fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air replace minecraft:cyan_wool
+fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air replace minecraft:red_wool
+fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air replace minecraft:yellow_wool
+fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air replace minecraft:black_wool
+fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air replace minecraft:orange_wool
+fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air replace minecraft:purple_wool
+fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air replace minecraft:blue_wool
+fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:air replace minecraft:light_blue_wool
