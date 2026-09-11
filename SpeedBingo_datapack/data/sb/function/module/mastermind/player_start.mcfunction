@@ -5,6 +5,9 @@ scoreboard players set @s BingoMMAttempt 0
 scoreboard players set @s BingoMMExact 0
 scoreboard players set @s BingoMMMatched 0
 
+# Remplace toujours le contenu sauvegarde dans la schematic par les objets de jeu.
+$execute at @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Barrel,limit=1] run function sb:module/mastermind/refill_barrel
+
 $execute as @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Answer1,limit=1] at @s run function sb:module/mastermind/read_color
 $execute as @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Answer2,limit=1] at @s run function sb:module/mastermind/read_color
 $execute as @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Answer3,limit=1] at @s run function sb:module/mastermind/read_color

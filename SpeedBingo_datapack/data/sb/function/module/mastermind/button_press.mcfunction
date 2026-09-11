@@ -1,4 +1,6 @@
-setblock ~ ~ ~ minecraft:pale_oak_button[face=floor,facing=west,powered=false]
+# Un appui reste alimente plusieurs ticks. Le cooldown empeche de compter
+# plusieurs essais sans modifier l'orientation du bouton dans la salle.
+scoreboard players set @s BingoMMCooldown 20
 
 $execute as @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Proposal1,limit=1] at @s run function sb:module/mastermind/read_color
 $execute as @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Proposal2,limit=1] at @s run function sb:module/mastermind/read_color
