@@ -34,6 +34,7 @@ scoreboard objectives add BingoMMWrong dummy
 scoreboard objectives add BingoMMValid dummy
 scoreboard objectives add BingoMMCooldown dummy
 scoreboard objectives add BingoMMCalc dummy
+scoreboard objectives add BingoMMState dummy
     #Lever Airship
 scoreboard objectives add BingoAirStep dummy
 scoreboard objectives add BingoAirState dummy
@@ -41,5 +42,8 @@ scoreboard objectives add BingoAirState dummy
 # Migration : retire les anciens tags, qui ne servent plus au fonctionnement des modules.
 tag @a remove BingoCraft_Running
 tag @a remove BingoAirship_Running
+tag @a remove BingoMastermind_Running
+tag @a remove BingoMastermind_Ready
+tag @a remove BingoMastermind_Win
     #Zip
 function train_mymy:load
