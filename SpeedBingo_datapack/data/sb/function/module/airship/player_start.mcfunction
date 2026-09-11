@@ -1,10 +1,10 @@
-tag @s add BingoAirship_Running
-
-# Chaque nouvelle tentative repart avec les sept leviers baisses.
+# Chaque nouvelle tentative repart avec les sept leviers desactives et les lampes eteintes.
 $execute as @e[type=minecraft:marker,tag=BingoAirship_$(instance)_Room,limit=1] at @s run function sb:module/airship/room_reset_silent {instance:"$(instance)"}
+$execute at @s run function sb:case/timer/start {gameTag:"$(caseName)",teamName:"$(teamName)"}
 
 # Le point d'arrivee est directement dans le bloc de l'echelle du schema.
 $tp @s @e[type=minecraft:marker,tag=BingoAirship_$(instance)_Start,limit=1]
+title @s times 10 60 20
 title @s title {"text":"AIRSHIP","color":"gold","bold":true}
-title @s subtitle {"text":"Leve les leviers dans l'ordre de 1 a 7","color":"yellow"}
+title @s subtitle {"text":"Active les leviers dans l'ordre de 1 a 7","color":"yellow"}
 playsound minecraft:block.iron_door.open master @s ~ ~ ~ 0.7 1.2

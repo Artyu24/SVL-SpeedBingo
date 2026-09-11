@@ -17,8 +17,11 @@ scoreboard objectives add BingoScore_Elytra dummy
     #Simon
 scoreboard objectives add BingoSimonScore dummy
 scoreboard objectives add BingoDone_Simon dummy
+function sb:module/simon/game/load
     #Tetes
 scoreboard objectives add BingoTetesButton minecraft.used:minecraft.stone_button
+scoreboard objectives add BingoTetesWallTick dummy
+scoreboard objectives add BingoTetesWallSecond dummy
     #Mastermind datapack
 scoreboard objectives add BingoMMColor dummy
 scoreboard objectives add BingoMMAttempt dummy
@@ -32,5 +35,9 @@ scoreboard objectives add BingoMMCalc dummy
     #Lever Airship
 scoreboard objectives add BingoAirStep dummy
 scoreboard objectives add BingoAirState dummy
+
+# Migration : retire les anciens tags, qui ne servent plus au fonctionnement des modules.
+tag @a remove BingoCraft_Running
+tag @a remove BingoAirship_Running
     #Zip
 function train_mymy:load

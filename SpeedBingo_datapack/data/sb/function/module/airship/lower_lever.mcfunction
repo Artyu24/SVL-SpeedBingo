@@ -11,3 +11,6 @@ execute if block ~ ~ ~ minecraft:lever[face=ceiling,facing=north,powered=true] r
 execute if block ~ ~ ~ minecraft:lever[face=ceiling,facing=south,powered=true] run setblock ~ ~ ~ minecraft:lever[face=ceiling,facing=south,powered=false]
 execute if block ~ ~ ~ minecraft:lever[face=ceiling,facing=east,powered=true] run setblock ~ ~ ~ minecraft:lever[face=ceiling,facing=east,powered=false]
 execute if block ~ ~ ~ minecraft:lever[face=ceiling,facing=west,powered=true] run setblock ~ ~ ~ minecraft:lever[face=ceiling,facing=west,powered=false]
+
+# Les schematics peuvent conserver lit=true sans mise a jour redstone lorsque le levier est deja eteint.
+fill ~-2 ~-2 ~-2 ~2 ~2 ~2 minecraft:redstone_lamp[lit=false] replace minecraft:redstone_lamp
