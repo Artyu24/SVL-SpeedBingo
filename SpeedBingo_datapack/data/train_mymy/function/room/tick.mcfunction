@@ -1,8 +1,8 @@
 scoreboard players operation #current trainRoom = @s trainRoom
 
-# La zone correspond aux dimensions 20 x 15 x 21 du schéma.
+# La présence dans le module A1 est donnée par le tag commun du système de cases.
 scoreboard players set #occupied trainMymyTmp 0
-$execute positioned ~-5.5 ~-5.5 ~-17.5 if entity @a[team=$(teamName),gamemode=!spectator,dx=20,dy=15,dz=21] run scoreboard players set #occupied trainMymyTmp 1
+$execute if entity @a[team=$(teamName),tag=BingoModule_A1_Playing,gamemode=!spectator] run scoreboard players set #occupied trainMymyTmp 1
 
 # Vérifie si cette salle possède déjà son train.
 scoreboard players set #hasTrain trainMymyTmp 0
