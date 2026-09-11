@@ -1,5 +1,5 @@
 # Securite : aucun module personnel ne doit rester Running apres la fin de sa case.
-tag @a[tag=BingoMastermind_Running,tag=!BingoModule_B4_Playing] remove BingoMastermind_Running
+scoreboard players reset @a[tag=!BingoModule_B4_Playing,scores={BingoMMState=1..}] BingoMMState
 tag @a[tag=BingoTetes_Running,tag=!BingoModule_C2_Playing] remove BingoTetes_Running
 tag @a[tag=BingoSimon_Running,tag=!BingoModule_D1_Playing] remove BingoSimon_Running
 

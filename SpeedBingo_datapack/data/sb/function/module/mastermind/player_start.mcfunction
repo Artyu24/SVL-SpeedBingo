@@ -1,6 +1,4 @@
-tag @s add BingoMastermind_Running
-tag @s remove BingoMastermind_Ready
-tag @s remove BingoMastermind_Win
+scoreboard players set @s BingoMMState 1
 scoreboard players set @s BingoMMAttempt 0
 scoreboard players set @s BingoMMExact 0
 scoreboard players set @s BingoMMMatched 0

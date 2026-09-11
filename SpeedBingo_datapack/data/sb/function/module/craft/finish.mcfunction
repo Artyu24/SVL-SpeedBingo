@@ -3,5 +3,6 @@ $execute at @s run function sb:case/timer/valid_silent {teamWin:"$(teamName)",te
 tellraw @s [{"text":"Craft - ","color":"gold"},{"text":"module fini en ","color":"green"},{"score":{"name":"@s","objective":"BingoTimer_Second"},"color":"yellow"},{"text":" secondes","color":"green"}]
 $function sb:case/case_finish_behaviour {caseName:"$(caseName)"}
 $function sb:case/teleport/tpback {caseName:"$(caseName)"}
+function sb:module/craft/clear_items
 
 $function sb:module/craft/refill_instance {instance:"$(instance)"}
