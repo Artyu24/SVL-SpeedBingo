@@ -8,3 +8,4 @@ execute if score @s BingoMMColor matches 7 run scoreboard players add #MMSol7 Bi
 execute if score @s BingoMMColor matches 8 run scoreboard players add #MMSol8 BingoMMCalc 1
 execute if score @s BingoMMColor matches 9 run scoreboard players add #MMSol9 BingoMMCalc 1
 execute if score @s BingoMMColor matches 10 run scoreboard players add #MMSol10 BingoMMCalc 1
+execute if score @s BingoMMColor matches 11 run scoreboard players add #MMSol11 BingoMMCalc 1

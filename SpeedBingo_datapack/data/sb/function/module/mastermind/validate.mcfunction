@@ -14,6 +14,7 @@ scoreboard players set #MMSol7 BingoMMCalc 0
 scoreboard players set #MMSol8 BingoMMCalc 0
 scoreboard players set #MMSol9 BingoMMCalc 0
 scoreboard players set #MMSol10 BingoMMCalc 0
+scoreboard players set #MMSol11 BingoMMCalc 0
 scoreboard players set #MMGuess1 BingoMMCalc 0
 scoreboard players set #MMGuess2 BingoMMCalc 0
 scoreboard players set #MMGuess3 BingoMMCalc 0
@@ -24,6 +25,7 @@ scoreboard players set #MMGuess7 BingoMMCalc 0
 scoreboard players set #MMGuess8 BingoMMCalc 0
 scoreboard players set #MMGuess9 BingoMMCalc 0
 scoreboard players set #MMGuess10 BingoMMCalc 0
+scoreboard players set #MMGuess11 BingoMMCalc 0
 
 $execute as @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Answer1,limit=1] run function sb:module/mastermind/count_answer
 $execute as @e[type=minecraft:marker,tag=BingoMastermind_$(instance)_Answer2,limit=1] run function sb:module/mastermind/count_answer

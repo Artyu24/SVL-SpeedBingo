@@ -30,3 +30,6 @@ scoreboard players operation @s BingoMMMatched += #MMMin9 BingoMMCalc
 scoreboard players operation #MMMin10 BingoMMCalc = #MMSol10 BingoMMCalc
 execute if score #MMGuess10 BingoMMCalc < #MMMin10 BingoMMCalc run scoreboard players operation #MMMin10 BingoMMCalc = #MMGuess10 BingoMMCalc
 scoreboard players operation @s BingoMMMatched += #MMMin10 BingoMMCalc
+scoreboard players operation #MMMin11 BingoMMCalc = #MMSol11 BingoMMCalc
+execute if score #MMGuess11 BingoMMCalc < #MMMin11 BingoMMCalc run scoreboard players operation #MMMin11 BingoMMCalc = #MMGuess11 BingoMMCalc
+scoreboard players operation @s BingoMMMatched += #MMMin11 BingoMMCalc
