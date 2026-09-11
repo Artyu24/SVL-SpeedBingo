@@ -10,4 +10,4 @@ scoreboard players set #Simon_RTT BingoSimonScore 0
 scoreboard players set #SimonTime_Albertos BingoTimer_Second 0
 scoreboard players set #SimonTime_RTT BingoTimer_Second 0
 
-function simon2:init
+function sb:module/simon/game/init
