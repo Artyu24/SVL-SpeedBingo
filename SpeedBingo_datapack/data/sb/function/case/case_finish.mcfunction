@@ -1,2 +1,1 @@
-$tag @s[tag=BingoModule_$(caseName)_Playing] add BingoModule_$(caseName)
-$tag @s remove BingoModule_$(caseName)_Playing
+$execute as @p[distance=..30, gamemode=adventure,tag=BingoModule_$(caseName)_Playing] run function sb:case/case_finish_behaviour {caseName:"$(caseName)"}

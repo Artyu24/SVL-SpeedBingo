@@ -1,0 +1,1 @@
+$execute if entity @e[type=marker,tag=$(teamName)Win,tag=$(case1)] if entity @e[type=marker,tag=$(teamName)Win,tag=$(case2)] if entity @e[type=marker,tag=$(teamName)Win,tag=$(case3)] if entity @e[type=marker,tag=$(teamName)Win,tag=$(case4)] run scoreboard players add $(teamName) BingoGameScore 2

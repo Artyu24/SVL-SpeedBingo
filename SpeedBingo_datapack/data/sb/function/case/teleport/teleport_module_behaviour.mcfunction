@@ -43,6 +43,7 @@ execute if score @s BingoTP matches ..39 run return fail
 # --- MOMENT DE LA TELEPORTATION (Score >= 40) ---
 
 $tag @s add BingoModule_$(gameTag)_Playing
+tag @s add BingoPlaying
 
 # Pour Simon uniquement, memorise le marqueur D1 exact utilise par l'equipe.
 # Les autres modules, notamment Elytra, conservent leur comportement actuel.

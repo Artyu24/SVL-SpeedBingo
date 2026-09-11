@@ -1,5 +1,5 @@
 execute as @a[tag=BingoSimon_Running] at @s run function sb:case/timer/cancel {caseName:"D1"}
-execute as @a[tag=BingoModule_D1_Playing] at @s run function sb:case/case_finish {caseName:"D1"}
+execute as @a[tag=BingoModule_D1_Playing] at @s run function sb:case/case_finish_behaviour {caseName:"D1"}
 tag @a remove BingoSimon_Running
 tag @a remove BingoModule_D1
 
