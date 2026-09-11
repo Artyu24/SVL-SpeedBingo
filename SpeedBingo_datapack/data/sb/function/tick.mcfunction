@@ -9,4 +9,3 @@ function sb:module/mastermind/mastermind_game {teamA:"Albertos",teamB:"RTT",case
 function sb:module/craft/craft_game {teamA:"Albertos",teamB:"RTT",caseName:"A2"}
 function sb:module/airship/airship_game
 function sb:module/simon/game/tick
-function train_mymy:tick
