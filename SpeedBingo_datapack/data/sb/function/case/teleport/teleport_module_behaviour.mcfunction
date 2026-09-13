@@ -31,10 +31,10 @@ execute if score @s BingoTP matches 1..39 run particle minecraft:reverse_portal 
 # --- TELEPORTATION PROGRESSIVE (ACTIONBAR) ---
 
 # Mise à jour des textes avec un switch sur le score
-execute if score @s BingoTP matches 1..10 run title @s actionbar {"text":"Téléportation  ■□□□","color":"aqua"}
-execute if score @s BingoTP matches 11..20 run title @s actionbar {"text":"Téléportation  ■■□□","color":"aqua"}
-execute if score @s BingoTP matches 21..30 run title @s actionbar {"text":"Téléportation  ■■■□","color":"aqua"}
-execute if score @s BingoTP matches 31..40 run title @s actionbar {"text":"Téléportation  ■■■■","color":"aqua"}
+execute if score @s BingoTP matches 1..10 run title @s actionbar {"text":"Téléportation  ■□□□","color":"dark_purple"}
+execute if score @s BingoTP matches 11..20 run title @s actionbar {"text":"Téléportation  ■■□□","color":"dark_purple"}
+execute if score @s BingoTP matches 21..30 run title @s actionbar {"text":"Téléportation  ■■■□","color":"dark_purple"}
+execute if score @s BingoTP matches 31..40 run title @s actionbar {"text":"Téléportation  ■■■■","color":"dark_purple"}
 
 # Si le chargement n'est pas terminé, on s'arrête ici
 execute if score @s BingoTP matches ..39 run return fail
@@ -51,6 +51,7 @@ $execute if entity @s[tag=BingoModule_D1_Playing] run tag @e[type=minecraft:mark
 $execute if entity @s[tag=BingoModule_D1_Playing] run tag @e[type=minecraft:marker,tag=D1,distance=..10,sort=nearest,limit=1] add BingoReturn_$(teamName)
 
 $function sb:case/head_add_team {teamTag:"$(teamName)", moveX:"$(moveX)", returnMoveX:"$(returnMoveX)"}
+setblock ~ ~ ~ minecraft:white_stained_glass
 
 scoreboard players reset @s BingoTP
 tag @s remove BingoTPPad
