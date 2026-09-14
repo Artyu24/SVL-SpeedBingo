@@ -1,10 +1,10 @@
 # Le chrono commun est deja lance par la case C2 lors de la teleportation.
 # La zone large permet de deplacer le marqueur Start dans la salle sans casser l'initialisation.
-$execute at @e[type=minecraft:marker,tag=BingoTetes_$(instance)_Start,limit=1] as @a[team=$(teamName),tag=BingoModule_$(caseName)_Playing,tag=!BingoTetes_Running,distance=..40,sort=nearest,limit=1] run function sb:module/tetes/player_start {instance:"$(instance)",teamName:"$(teamName)",caseName:"$(caseName)"}
+$execute at @e[type=minecraft:marker,tag=BingoTetes_$(instance)_Start,limit=1] as @a[gamemode=adventure,team=$(teamName),tag=BingoModule_$(caseName)_Playing,tag=!BingoTetes_Running,distance=..40,sort=nearest,limit=1] run function sb:module/tetes/player_start {instance:"$(instance)",teamName:"$(teamName)",caseName:"$(caseName)"}
 
 # Detecte directement le clic du joueur, meme si le marqueur du bouton est legerement decale.
 $scoreboard players set @a[team=$(teamName),tag=BingoModule_$(caseName)_Playing,tag=BingoTetes_Running,tag=BingoTetesWallOpen] BingoTetesButton 0
-$execute as @a[team=$(teamName),tag=BingoModule_$(caseName)_Playing,tag=BingoTetes_Running,tag=!BingoTetesWallOpen,scores={BingoTetesButton=1..},limit=1] run function sb:module/tetes/button_pressed {instance:"$(instance)"}
+$execute as @a[gamemode=adventure,team=$(teamName),tag=BingoModule_$(caseName)_Playing,tag=BingoTetes_Running,tag=!BingoTetesWallOpen,scores={BingoTetesButton=1..},limit=1] run function sb:module/tetes/button_pressed {instance:"$(instance)"}
 
 # Garde aussi la detection du bloc alimente comme securite.
 $execute at @e[type=minecraft:marker,tag=BingoTetes_$(instance)_Button,limit=1] if block ~ ~ ~ minecraft:stone_button[powered=true] as @a[team=$(teamName),tag=BingoModule_$(caseName)_Playing,tag=BingoTetes_Running,tag=!BingoTetesWallOpen,distance=..20,sort=nearest,limit=1] run function sb:module/tetes/wall_start {instance:"$(instance)"}

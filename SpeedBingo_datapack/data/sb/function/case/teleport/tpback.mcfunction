@@ -1,6 +1,8 @@
 # Retourne le joueur vers le marqueur de sa case sur la grille.
 # Le marqueur memorise lors de l'entree est prioritaire. La recherche par nom
 # de case reste disponible pour les anciennes salles et les appels manuels.
+execute unless entity @s[gamemode=adventure] run return fail
+$function sb:case/teleport/cleanup_module_items {caseName:"$(caseName)"}
 $execute if entity @s[team=Albertos] if entity @e[type=minecraft:marker,tag=$(caseName),tag=BingoReturn_Albertos,limit=1] run return run execute at @e[type=minecraft:marker,tag=$(caseName),tag=BingoReturn_Albertos,limit=1] run tp @s ~ ~1 ~
 $execute if entity @s[team=RTT] if entity @e[type=minecraft:marker,tag=$(caseName),tag=BingoReturn_RTT,limit=1] run return run execute at @e[type=minecraft:marker,tag=$(caseName),tag=BingoReturn_RTT,limit=1] run tp @s ~ ~1 ~
 

@@ -1,24 +1,24 @@
 # --- VERIFICATIONS (Le contexte @s est désormais le joueur sur la plaque) ---
 
 # Vérification 1 : Mauvaise équipe
-$execute unless entity @s[team=$(teamName)] run title @s actionbar {"text":"Tu n'es pas de la bonne équipe","color":"red"}
-$execute unless entity @s[team=$(teamName)] run return fail
+$execute unless entity @s[gamemode=adventure,team=$(teamName)] run title @s actionbar {"text":"Réservé aux joueurs en aventure de la bonne équipe","color":"red"}
+$execute unless entity @s[gamemode=adventure,team=$(teamName)] run return fail
 
 # Vérification 2 : Le joueur a déjà fait ce mini-jeu
 $execute if entity @s[tag=BingoModule_$(gameTag)] run title @s actionbar {"text":"Tu as déjà fait ce jeu !","color":"red"}
 $execute if entity @s[tag=BingoModule_$(gameTag)] run return fail
 
 # Vérification 3 : Un coéquipier joue déjà dans ce module
-$execute if entity @a[distance=..200,team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run title @s actionbar {"text":"Un joueur de ton équipe est déjà dans ce module !","color":"red"}
-$execute if entity @a[distance=..200,team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run return fail
+$execute if entity @a[gamemode=adventure,distance=..200,team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run title @s actionbar {"text":"Un joueur de ton équipe est déjà dans ce module !","color":"red"}
+$execute if entity @a[gamemode=adventure,distance=..200,team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run return fail
 
 
 # --- PREPARATION A LA TELEPORTATION ---
 
 # On retire le tag aux autres joueurs proches pour éviter les conflits
-$execute positioned ~ ~ ~ run tag @a[distance=..2,team=$(teamName),tag=BingoTPPad] remove BingoTPPad
+$execute positioned ~ ~ ~ run tag @a[gamemode=adventure,distance=..2,team=$(teamName),tag=BingoTPPad] remove BingoTPPad
 tag @s add BingoTPPad
-$execute positioned ~ ~ ~ run scoreboard players set @a[distance=..2,team=$(teamName),tag=!BingoTPPad] BingoTP 0
+$execute positioned ~ ~ ~ run scoreboard players set @a[gamemode=adventure,distance=..2,team=$(teamName),tag=!BingoTPPad] BingoTP 0
 
 # Incrémentation du score
 scoreboard players add @s BingoTP 1
