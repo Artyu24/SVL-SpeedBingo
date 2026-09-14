@@ -1,3 +1,4 @@
+function sb:module/tetes/clear_items
 $function sb:case/case_finish {caseName:"$(caseName)"}
 $function sb:case/teleport/tpback {caseName:"$(caseName)"}
 
