@@ -1,4 +1,4 @@
-# Le chrono commun est deja lance par la case C2 lors de la teleportation.
+# Le chrono commun est deja lance par la case B1 lors de la teleportation.
 # La zone large permet de deplacer le marqueur Start dans la salle sans casser l'initialisation.
 $execute at @e[type=minecraft:marker,tag=BingoTetes_$(instance)_Start,limit=1] as @a[gamemode=adventure,team=$(teamName),tag=BingoModule_$(caseName)_Playing,tag=!BingoTetes_Running,distance=..40,sort=nearest,limit=1] run function sb:module/tetes/player_start {instance:"$(instance)",teamName:"$(teamName)",caseName:"$(caseName)"}
 
