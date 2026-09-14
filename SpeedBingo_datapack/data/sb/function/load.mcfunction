@@ -1,5 +1,3 @@
-say [F19-Confort] Initialisation termine ! :mignon:
-
 #System
     # Global Score
 scoreboard objectives add BingoGameScore dummy

@@ -6,4 +6,3 @@ scoreboard objectives add Simon2Cooldown dummy
 scoreboard objectives add Simon2Pressed dummy
 
 function sb:module/simon/game/init
-tellraw @a [{"text":"[Simon] ","color":"gold"},{"text":"Datapack charge.","color":"green"}]
