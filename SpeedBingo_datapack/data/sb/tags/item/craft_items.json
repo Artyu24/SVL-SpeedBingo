@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:amethyst_shard", "minecraft:andesite", "minecraft:bone", "minecraft:bone_meal", "minecraft:brick", "minecraft:calcite", "minecraft:charcoal", "minecraft:clay_ball", "minecraft:coal", "minecraft:cobblestone", "minecraft:cocoa_beans", "minecraft:copper_ingot", "minecraft:deepslate", "minecraft:diorite", "minecraft:dirt", "minecraft:egg", "minecraft:feather", "minecraft:flint", "minecraft:glowstone_dust", "minecraft:gold_ingot", "minecraft:gold_nugget", "minecraft:granite", "minecraft:gravel", "minecraft:gunpowder", "minecraft:ink_sac", "minecraft:iron_ingot", "minecraft:kelp", "minecraft:lapis_lazuli", "minecraft:leather", "minecraft:netherrack", "minecraft:oak_planks", "minecraft:paper", "minecraft:poisonous_potato", "minecraft:prismarine_crystals", "minecraft:quartz", "minecraft:rabbit_hide", "minecraft:raw_copper", "minecraft:redstone", "minecraft:rotten_flesh", "minecraft:sand", "minecraft:slime_ball", "minecraft:spider_eye", "minecraft:stick", "minecraft:stone", "minecraft:string", "minecraft:tripwire_hook", "minecraft:tuff", "minecraft:wheat_seeds", "minecraft:crossbow"
+  ]
+}
