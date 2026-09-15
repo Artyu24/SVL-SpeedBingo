@@ -1,1 +1,0 @@
-execute as @a[distance=..100,tag=!BingoPlaying,tag=!BingoTPPad] run title @s actionbar [{text:"Bingo : ",color:"white"},{score:{name:"Albertos",objective:"BingoGameScore"},color:"aqua"},{text:" - ",color:"gray"},{score:{name:"RTT",objective:"BingoGameScore"},color:"green"}]

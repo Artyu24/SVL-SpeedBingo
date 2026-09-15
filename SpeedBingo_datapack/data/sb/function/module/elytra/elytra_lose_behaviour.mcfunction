@@ -3,5 +3,6 @@ $execute as @e[distance=..100,type=minecraft:marker,tag=$(caseName),sort=nearest
 $tag @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose] remove BingoModule_$(caseName)_Playing
 $tag @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose] add BingoModule_$(caseName)
 clear @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose] *[custom_data~{BingoElytraItem:1}]
+stopsound @p[distance=..10, gamemode=adventure,tag=BingoModule_ElytraLose]
 effect clear @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose]
 tag @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose] remove BingoModule_ElytraLose

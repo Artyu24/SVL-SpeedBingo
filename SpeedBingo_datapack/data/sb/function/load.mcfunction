@@ -1,6 +1,10 @@
+say [F19-Confort] Initialisation termine ! :mignon:
+
 #System
     # Global Score
 scoreboard objectives add BingoGameScore dummy
+    # Global Timer
+scoreboard objectives add BingoGameTimer dummy
     # Head Feedback
 scoreboard objectives add BingoHead dummy
     #TP

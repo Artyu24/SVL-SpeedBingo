@@ -56,5 +56,7 @@ setblock ~ ~ ~ minecraft:white_stained_glass
 scoreboard players reset @s BingoTP
 tag @s remove BingoTPPad
 
+stopsound @s
+
 $tp @p[distance=..1,gamemode=adventure, team=$(teamName), tag=BingoModule_$(gameTag)_Playing] $(tpCoord)
 return 1
