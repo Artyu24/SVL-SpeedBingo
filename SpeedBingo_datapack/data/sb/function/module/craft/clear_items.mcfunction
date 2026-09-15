@@ -1,2 +1,2 @@
-# Retire uniquement les ressources et l'arbalete marques par le module Craft.
-clear @s #sb:craft_items[minecraft:custom_data~{sb_module:"craft"}]
+# Retire tous les objets marques comme appartenant a un module.
+clear @a[distance=..250,gamemode=adventure] *[custom_data~{BingoZipItem:1}]

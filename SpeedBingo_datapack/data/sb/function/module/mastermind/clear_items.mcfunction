@@ -1,2 +1,2 @@
-# Retire uniquement les objets marques par le module Mastermind.
-clear @s #sb:mastermind_items[minecraft:custom_data~{sb_module:"mastermind"}]
+# Retire tous les objets marques comme appartenant a un module.
+clear @a[distance=..250,gamemode=adventure] *[custom_data~{BingoZipItem:1}]
