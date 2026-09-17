@@ -1,0 +1,40 @@
+# Marque uniquement les objets fabriques utiles au module. Le parcours reste
+# actif tant que le joueur possede BingoModule_A2_Playing, ce qui couvre aussi
+# un resultat garde temporairement sur le curseur de l'interface de craft.
+execute if items entity @s hotbar.0 #sb:craft_results run item modify entity @s hotbar.0 sb:mark_craft_result
+execute if items entity @s hotbar.1 #sb:craft_results run item modify entity @s hotbar.1 sb:mark_craft_result
+execute if items entity @s hotbar.2 #sb:craft_results run item modify entity @s hotbar.2 sb:mark_craft_result
+execute if items entity @s hotbar.3 #sb:craft_results run item modify entity @s hotbar.3 sb:mark_craft_result
+execute if items entity @s hotbar.4 #sb:craft_results run item modify entity @s hotbar.4 sb:mark_craft_result
+execute if items entity @s hotbar.5 #sb:craft_results run item modify entity @s hotbar.5 sb:mark_craft_result
+execute if items entity @s hotbar.6 #sb:craft_results run item modify entity @s hotbar.6 sb:mark_craft_result
+execute if items entity @s hotbar.7 #sb:craft_results run item modify entity @s hotbar.7 sb:mark_craft_result
+execute if items entity @s hotbar.8 #sb:craft_results run item modify entity @s hotbar.8 sb:mark_craft_result
+execute if items entity @s inventory.0 #sb:craft_results run item modify entity @s inventory.0 sb:mark_craft_result
+execute if items entity @s inventory.1 #sb:craft_results run item modify entity @s inventory.1 sb:mark_craft_result
+execute if items entity @s inventory.2 #sb:craft_results run item modify entity @s inventory.2 sb:mark_craft_result
+execute if items entity @s inventory.3 #sb:craft_results run item modify entity @s inventory.3 sb:mark_craft_result
+execute if items entity @s inventory.4 #sb:craft_results run item modify entity @s inventory.4 sb:mark_craft_result
+execute if items entity @s inventory.5 #sb:craft_results run item modify entity @s inventory.5 sb:mark_craft_result
+execute if items entity @s inventory.6 #sb:craft_results run item modify entity @s inventory.6 sb:mark_craft_result
+execute if items entity @s inventory.7 #sb:craft_results run item modify entity @s inventory.7 sb:mark_craft_result
+execute if items entity @s inventory.8 #sb:craft_results run item modify entity @s inventory.8 sb:mark_craft_result
+execute if items entity @s inventory.9 #sb:craft_results run item modify entity @s inventory.9 sb:mark_craft_result
+execute if items entity @s inventory.10 #sb:craft_results run item modify entity @s inventory.10 sb:mark_craft_result
+execute if items entity @s inventory.11 #sb:craft_results run item modify entity @s inventory.11 sb:mark_craft_result
+execute if items entity @s inventory.12 #sb:craft_results run item modify entity @s inventory.12 sb:mark_craft_result
+execute if items entity @s inventory.13 #sb:craft_results run item modify entity @s inventory.13 sb:mark_craft_result
+execute if items entity @s inventory.14 #sb:craft_results run item modify entity @s inventory.14 sb:mark_craft_result
+execute if items entity @s inventory.15 #sb:craft_results run item modify entity @s inventory.15 sb:mark_craft_result
+execute if items entity @s inventory.16 #sb:craft_results run item modify entity @s inventory.16 sb:mark_craft_result
+execute if items entity @s inventory.17 #sb:craft_results run item modify entity @s inventory.17 sb:mark_craft_result
+execute if items entity @s inventory.18 #sb:craft_results run item modify entity @s inventory.18 sb:mark_craft_result
+execute if items entity @s inventory.19 #sb:craft_results run item modify entity @s inventory.19 sb:mark_craft_result
+execute if items entity @s inventory.20 #sb:craft_results run item modify entity @s inventory.20 sb:mark_craft_result
+execute if items entity @s inventory.21 #sb:craft_results run item modify entity @s inventory.21 sb:mark_craft_result
+execute if items entity @s inventory.22 #sb:craft_results run item modify entity @s inventory.22 sb:mark_craft_result
+execute if items entity @s inventory.23 #sb:craft_results run item modify entity @s inventory.23 sb:mark_craft_result
+execute if items entity @s inventory.24 #sb:craft_results run item modify entity @s inventory.24 sb:mark_craft_result
+execute if items entity @s inventory.25 #sb:craft_results run item modify entity @s inventory.25 sb:mark_craft_result
+execute if items entity @s inventory.26 #sb:craft_results run item modify entity @s inventory.26 sb:mark_craft_result
+execute if items entity @s weapon.offhand #sb:craft_results run item modify entity @s weapon.offhand sb:mark_craft_result
