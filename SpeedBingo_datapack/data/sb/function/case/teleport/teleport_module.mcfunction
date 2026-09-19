@@ -1,1 +1,3 @@
+$execute positioned ~ ~ ~ run scoreboard players set @a[gamemode=adventure,distance=..5,team=$(teamName),tag=!BingoTPPad] BingoTP 0
+$execute positioned ~ ~ ~ run tag @a[gamemode=adventure,distance=..5,team=$(teamName),tag=BingoTPPad] remove BingoTPPad
 $execute positioned ~ ~1 ~ as @p[distance=..1,gamemode=adventure,team=$(teamName)] at @s run return run function sb:case/teleport/teleport_module_behaviour {teamName:"$(teamName)", gameTag:"$(gameTag)", moveX:"$(moveX)", returnMoveX:"$(returnMoveX)", tpCoord:"$(tpCoord)"}

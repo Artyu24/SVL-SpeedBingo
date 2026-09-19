@@ -18,3 +18,5 @@ $execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Pla
 $execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-18 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}
 $execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-19 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}
 $execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-20 ~ minecraft:barrier run title @s actionbar {"text":"Tu te rapproches du sol !","color":"green"}
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-20 ~ minecraft:barrier run tag @s add BingoModule_ElytraWarn
+$execute as @a[distance=..100,gamemode=adventure,tag=BingoModule_$(caseName)_Playing] at @s if block ~ ~-21 ~ minecraft:barrier run tag @s remove BingoModule_ElytraWarn

@@ -12,11 +12,9 @@ $execute if entity @s[tag=BingoModule_$(gameTag)] run return fail
 $execute if entity @a[gamemode=adventure,distance=..200,team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run title @s actionbar {"text":"Un joueur de ton équipe est déjà dans ce module !","color":"red"}
 $execute if entity @a[gamemode=adventure,distance=..200,team=$(teamName),tag=BingoModule_$(gameTag)_Playing] run return fail
 
-
 # --- PREPARATION A LA TELEPORTATION ---
 
 # On retire le tag aux autres joueurs proches pour éviter les conflits
-$execute positioned ~ ~ ~ run tag @a[gamemode=adventure,distance=..2,team=$(teamName),tag=BingoTPPad] remove BingoTPPad
 tag @s add BingoTPPad
 $execute positioned ~ ~ ~ run scoreboard players set @a[gamemode=adventure,distance=..2,team=$(teamName),tag=!BingoTPPad] BingoTP 0
 
@@ -52,6 +50,8 @@ $execute if entity @s[tag=BingoModule_D1_Playing] run tag @e[type=minecraft:mark
 
 $function sb:case/head_add_team {teamTag:"$(teamName)", moveX:"$(moveX)", returnMoveX:"$(returnMoveX)"}
 setblock ~ ~ ~ minecraft:white_stained_glass
+$execute if entity @s[team=Albertos] at @e[type=minecraft:marker,tag=$(gameTag),limit=1] run setblock ~-1 ~1 ~ minecraft:light_blue_stained_glass
+$execute if entity @s[team=RTT] at @e[type=minecraft:marker,tag=$(gameTag),limit=1] run setblock ~1 ~1 ~ minecraft:lime_stained_glass
 
 scoreboard players reset @s BingoTP
 tag @s remove BingoTPPad

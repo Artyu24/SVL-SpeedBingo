@@ -3,6 +3,9 @@ $execute as @e[distance=..100,type=minecraft:marker,tag=$(caseName),sort=nearest
 $tag @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose] remove BingoModule_$(caseName)_Playing
 $tag @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose] add BingoModule_$(caseName)
 clear @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose] *[custom_data~{BingoElytraItem:1}]
-stopsound @p[distance=..10, gamemode=adventure,tag=BingoModule_ElytraLose]
+stopsound @p[distance=..100, gamemode=adventure,tag=BingoModule_ElytraLose]
 effect clear @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose]
+$execute if entity @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose,team=RTT] at @e[type=minecraft:marker,tag=$(caseName)] run setblock ~1 ~1 ~ minecraft:air
+$execute if entity @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose,team=Albertos] at @e[type=minecraft:marker,tag=$(caseName)] run setblock ~-1 ~1 ~ minecraft:air
+tag @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose] remove BingoModule_ElytraWarn
 tag @a[distance=..100,gamemode=adventure,tag=BingoModule_ElytraLose] remove BingoModule_ElytraLose
